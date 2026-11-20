@@ -68,15 +68,16 @@ function ProjectsCatalogPage() {
       {/* ── FILTERS & SEARCH ────────────────────────────────────────────────── */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-ink-raised">
         {/* Category Buttons */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter kategori proyek">
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat;
             return (
               <button
                 key={cat}
                 type="button"
+                aria-pressed={isActive}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 rounded-md font-mono text-xs uppercase tracking-wider transition-colors ${
+                className={`px-3 py-1.5 rounded-md font-mono text-xs uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember ${
                   isActive
                     ? "bg-ember text-ink font-bold"
                     : "bg-ink-soft text-muted-ink hover:text-paper border border-ink-raised"
@@ -90,12 +91,17 @@ function ProjectsCatalogPage() {
 
         {/* Search Input */}
         <div className="w-full sm:w-64">
+          <label htmlFor="project-search" className="sr-only">
+            Cari proyek berdasarkan judul, ringkasan, atau teknologi
+          </label>
           <input
-            type="text"
+            id="project-search"
+            type="search"
             placeholder="Cari stack atau judul..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-3.5 py-2 rounded-md bg-ink border border-ink-raised text-xs font-mono text-paper placeholder:text-muted-ink focus:outline-none focus:border-ember"
+            className="w-full px-3.5 py-2 rounded-md bg-ink border border-ink-raised text-xs font-mono text-paper placeholder:text-muted-ink focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember"
+            aria-label="Cari proyek berdasarkan judul atau teknologi"
           />
         </div>
       </div>

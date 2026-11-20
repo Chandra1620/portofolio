@@ -18,16 +18,13 @@ export function TacticalPitchBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId: number;
+    let animationFrameId: number | null = null;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    const handleResize = () => {
-      if (!canvas) return;
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    };
-    window.addEventListener("resize", handleResize);
+    // Reduced motion preference
+    const motionMediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let isReducedMotion = motionMediaQuery.matches;
 
     // Mouse tracking for subtle tactical reaction
     const mouse = { x: -1000, y: -1000 };
@@ -35,7 +32,7 @@ export function TacticalPitchBackground() {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     // Generate tactical player nodes
     const nodeCount = Math.min(20, Math.max(12, Math.floor(width / 95)));
@@ -56,10 +53,12 @@ export function TacticalPitchBackground() {
 
     let pulseAngle = 0;
 
-    const render = () => {
+    const drawFrame = (animate: boolean) => {
       ctx.clearRect(0, 0, width, height);
 
-      pulseAngle += 0.02;
+      if (animate) {
+        pulseAngle += 0.02;
+      }
       const pulse = (Math.sin(pulseAngle) + 1) * 0.5;
 
       // ── Draw Tactical Pitch Watermark Lines ─────────────────────────────
@@ -104,22 +103,28 @@ export function TacticalPitchBackground() {
         const node = nodes[i];
         if (!node) continue;
 
-        // Move node
-        node.x += node.vx;
-        node.y += node.vy;
+        if (animate) {
+          // Move node
+          node.x += node.vx;
+          node.y += node.vy;
 
-        // Bounce on boundary
-        if (node.x < 20 || node.x > width - 20) node.vx *= -1;
-        if (node.y < 20 || node.y > height - 20) node.vy *= -1;
+          // Bounce on boundary
+          if (node.x < 20 || node.x > width - 20) node.vx *= -1;
+          if (node.y < 20 || node.y > height - 20) node.vy *= -1;
 
-        // React to mouse proximity (pass avoidance)
-        const dx = node.x - mouse.x;
-        const dy = node.y - mouse.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          const force = (140 - dist) / 140;
-          node.x += (dx / dist) * force * 1.8;
-          node.y += (dy / dist) * force * 1.8;
+          // React to mouse proximity (pass avoidance)
+          const dx = node.x - mouse.x;
+          const dy = node.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 140 && dist > 0.01) {
+            const force = (140 - dist) / 140;
+            const stepX = (dx / dist) * force * 1.8;
+            const stepY = (dy / dist) * force * 1.8;
+            if (Number.isFinite(stepX) && Number.isFinite(stepY)) {
+              node.x += stepX;
+              node.y += stepY;
+            }
+          }
         }
 
         // Draw node
@@ -139,30 +144,85 @@ export function TacticalPitchBackground() {
           if (!other) continue;
           const distBetween = Math.hypot(node.x - other.x, node.y - other.y);
 
-          if (distBetween < 160) {
+          if (distBetween < 160 && distBetween > 0.01) {
             const alpha = (1 - distBetween / 160) * 0.08;
-            ctx.save();
-            ctx.setLineDash([4, 6]);
-            ctx.strokeStyle = `rgba(142, 158, 175, ${alpha})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(node.x, node.y);
-            ctx.lineTo(other.x, other.y);
-            ctx.stroke();
-            ctx.restore();
+            if (Number.isFinite(alpha)) {
+              ctx.save();
+              ctx.setLineDash([4, 6]);
+              ctx.strokeStyle = `rgba(142, 158, 175, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(node.x, node.y);
+              ctx.lineTo(other.x, other.y);
+              ctx.stroke();
+              ctx.restore();
+            }
           }
         }
       }
-
-      animationFrameId = requestAnimationFrame(render);
     };
 
-    render();
+    const loop = () => {
+      drawFrame(true);
+      animationFrameId = requestAnimationFrame(loop);
+    };
+
+    const startAnimation = () => {
+      if (isReducedMotion || document.hidden) {
+        drawFrame(false);
+        return;
+      }
+      if (animationFrameId === null) {
+        animationFrameId = requestAnimationFrame(loop);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    };
+
+    const handleResize = () => {
+      if (!canvas) return;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      if (isReducedMotion || document.hidden) {
+        drawFrame(false);
+      }
+    };
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAnimation();
+      } else {
+        startAnimation();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      isReducedMotion = e.matches;
+      if (isReducedMotion) {
+        stopAnimation();
+        drawFrame(false);
+      } else {
+        startAnimation();
+      }
+    };
+    motionMediaQuery.addEventListener("change", handleMotionChange);
+
+    // Initial start
+    startAnimation();
 
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      motionMediaQuery.removeEventListener("change", handleMotionChange);
+      stopAnimation();
     };
   }, []);
 

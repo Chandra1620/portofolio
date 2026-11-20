@@ -153,7 +153,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
         <Footer />
         <InteractiveBallWidget />
-        <Toaster position="bottom-right" richColors />
+        <Toaster position="top-right" richColors />
         <Scripts />
       </body>
     </html>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Sparkles, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
+import { PROJECTS } from "@/data/portfolio-data";
 
 export function InteractiveBallWidget() {
   const [goals, setGoals] = useState(0);
@@ -10,28 +11,28 @@ export function InteractiveBallWidget() {
   const handleShoot = () => {
     if (isShooting) return;
     setIsShooting(true);
-  const newScore = goals + 1;
-  setGoals(newScore);
+    const newScore = goals + 1;
+    setGoals(newScore);
 
-  // Trigger celebration toast with warm Indonesian phrasing
-  toast.success(`⚽ Gol ke-${newScore}!`, {
-    description:
-      newScore === 1
-        ? "Terima kasih sudah mampir! Silakan jelajahi 5 proyek dan studi kasus saya."
-        : "Tendangan tepat sasaran. Chandra siap berkontribusi pada proyek web & mobile Anda.",
-    duration: 3500,
-  });
+    // Trigger celebration toast with dynamic project count
+    toast.success(`⚽ Gol ke-${newScore}!`, {
+      description:
+        newScore === 1
+          ? `Terima kasih sudah mampir! Silakan jelajahi ${PROJECTS.length} proyek dan studi kasus saya.`
+          : "Tendangan tepat sasaran. Chandra siap berkontribusi pada proyek web & mobile Anda.",
+      duration: 3500,
+    });
 
-  setShowCelebration(true);
+    setShowCelebration(true);
 
-  setTimeout(() => {
-    setIsShooting(false);
-  }, 700);
+    setTimeout(() => {
+      setIsShooting(false);
+    }, 700);
 
-  setTimeout(() => {
-    setShowCelebration(false);
-  }, 2400);
-};
+    setTimeout(() => {
+      setShowCelebration(false);
+    }, 2400);
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
@@ -57,10 +58,10 @@ export function InteractiveBallWidget() {
         type="button"
         onClick={handleShoot}
         title="Klik untuk menendang bola!"
-        className={`group relative size-13 sm:size-14 rounded-full border border-ink-raised bg-ink-soft p-2.5 shadow-lg transition-all duration-300 hover:scale-105 hover:border-ember active:scale-95 flex items-center justify-center ${
+        className={`group relative size-13 sm:size-14 rounded-full border border-ink-raised bg-ink-soft p-2.5 shadow-lg transition-all duration-300 hover:scale-105 hover:border-ember active:scale-95 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember ${
           isShooting ? "animate-bounce" : ""
         }`}
-        aria-label="Tendang bola sepak interaktif"
+        aria-label={`Tendang bola sepak interaktif, saat ini ${goals} gol`}
       >
         {/* Soccer Ball Graphic (SVG) */}
         <svg

@@ -6,7 +6,6 @@ import {
   MapPin,
   Copy,
   Check,
-  Send,
   Calendar,
   ArrowUpRight,
   ShieldCheck,
@@ -39,7 +38,7 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   useReveal();
   const [copied, setCopied] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [copiedDraft, setCopiedDraft] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -51,16 +50,47 @@ function ContactPage() {
     honeypot: "",
   });
 
-  const handleCopyEmail = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard.writeText(PERSONAL_INFO.email);
+  const getBriefText = () => {
+    return `Halo Chandra,\n\nNama: ${formData.name}\nEmail: ${formData.email}\nLayanan: ${formData.service}\nEstimasi Anggaran: ${formData.budget}\n\nKebutuhan:\n${formData.message}`;
+  };
+
+  const handleCopyEmail = async () => {
+    if (typeof window === "undefined") return;
+
+    if (!navigator?.clipboard?.writeText) {
+      toast.error("Fitur clipboard tidak didukung pada browser Anda.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(PERSONAL_INFO.email);
       setCopied(true);
       toast.success("Alamat email disalin ke clipboard.");
       setTimeout(() => setCopied(false), 2500);
+    } catch {
+      toast.error("Gagal menyalin email. Akses clipboard diblokir oleh browser.");
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleCopyDraft = async () => {
+    if (typeof window === "undefined") return;
+
+    if (!navigator?.clipboard?.writeText) {
+      toast.error("Fitur clipboard tidak didukung pada browser Anda.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(getBriefText());
+      setCopiedDraft(true);
+      toast.success("Draf pesan disalin ke clipboard.");
+      setTimeout(() => setCopiedDraft(false), 2500);
+    } catch {
+      toast.error("Gagal menyalin draf pesan.");
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (formData.honeypot) {
@@ -72,24 +102,20 @@ function ContactPage() {
       return;
     }
 
-    setIsSubmitting(true);
-
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
-      setIsSuccess(true);
-      toast.success("Pesan telah siap diteruskan.");
-
       const mailtoSubject = encodeURIComponent(
         `[Brief Proyek] ${formData.name} - ${formData.service}`
       );
-      const mailtoBody = encodeURIComponent(
-        `Halo Chandra,\n\nNama: ${formData.name}\nEmail: ${formData.email}\nLayanan: ${formData.service}\nEstimasi Anggaran: ${formData.budget}\n\nKebutuhan:\n${formData.message}`
-      );
-      window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${mailtoSubject}&body=${mailtoBody}`;
-    } catch (err) {
-      toast.error("Terjadi kendala. Silakan gunakan WhatsApp untuk menghubungi langsung.");
-    } finally {
-      setIsSubmitting(false);
+      const mailtoBody = encodeURIComponent(getBriefText());
+      const mailtoUrl = `mailto:${PERSONAL_INFO.email}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+      // Open email client with pre-filled subject and body
+      window.location.href = mailtoUrl;
+
+      setIsSuccess(true);
+      toast.success("Aplikasi email dibuka dengan draf pesan Anda.");
+    } catch {
+      toast.error("Terjadi kendala saat membuka aplikasi email. Anda dapat menghubungi via WhatsApp.");
     }
   };
 
@@ -209,21 +235,64 @@ function ContactPage() {
             </div>
 
             {isSuccess ? (
-              <div className="py-8 text-center space-y-3">
+              <div className="py-6 text-center space-y-4">
                 <div className="size-12 rounded-full bg-turf/10 text-turf grid place-items-center mx-auto border border-turf/30">
                   <Check className="size-6" />
                 </div>
-                <h4 className="font-display font-bold text-lg text-paper">Pesan Siap Dikirim</h4>
-                <p className="text-xs sm:text-sm text-muted-ink max-w-md mx-auto leading-relaxed">
-                  Terima kasih, {formData.name}. Klien email Anda telah disiapkan dengan ringkasan brief ini.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setIsSuccess(false)}
-                  className="mt-3 px-4 py-2 rounded-md bg-ink-raised font-mono text-xs uppercase tracking-wider text-paper hover:bg-ink transition-colors"
-                >
-                  Tulis Pesan Baru
-                </button>
+                <div className="space-y-1">
+                  <h4 className="font-display font-bold text-lg text-paper">Draf Email Berhasil Disiapkan</h4>
+                  <p className="text-xs sm:text-sm text-muted-ink max-w-md mx-auto leading-relaxed">
+                    Aplikasi email pada perangkat Anda telah dibuka dengan draf pesan ini untuk dikirimkan ke{" "}
+                    <span className="text-paper font-medium">{PERSONAL_INFO.email}</span>.
+                  </p>
+                </div>
+
+                {/* Fallback instructions if email client didn't open */}
+                <div className="p-4 rounded-lg bg-ink border border-ink-raised text-left space-y-2.5 max-w-lg mx-auto">
+                  <div className="flex items-center justify-between text-xs font-mono text-muted-ink">
+                    <span>Aplikasi email tidak terbuka otomatis?</span>
+                    <button
+                      type="button"
+                      onClick={handleCopyDraft}
+                      className="inline-flex items-center gap-1.5 text-ember hover:underline font-bold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ember rounded"
+                    >
+                      {copiedDraft ? (
+                        <>
+                          <Check className="size-3.5 text-turf" />
+                          <span>Draf Tersalin</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="size-3.5" />
+                          <span>Salin Teks Draf</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  <p className="text-xs text-muted-ink leading-relaxed">
+                    Anda dapat menyalin teks draf di atas, mengirimkannya via{" "}
+                    <a
+                      href={PERSONAL_INFO.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ember hover:underline font-medium"
+                    >
+                      WhatsApp Chat
+                    </a>
+                    , atau mengirim email manual langsung ke{" "}
+                    <span className="text-paper font-mono">{PERSONAL_INFO.email}</span>.
+                  </p>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setIsSuccess(false)}
+                    className="px-4 py-2 rounded-md bg-ink-raised font-mono text-xs uppercase tracking-wider text-paper hover:bg-ink border border-ink-raised transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember"
+                  >
+                    Tulis Pesan Baru
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -250,7 +319,7 @@ function ContactPage() {
                       placeholder="e.g. Budi Santoso"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember"
                     />
                   </div>
 
@@ -266,7 +335,7 @@ function ContactPage() {
                       placeholder="e.g. budi@perusahaan.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember"
                     />
                   </div>
                 </div>
@@ -281,7 +350,7 @@ function ContactPage() {
                       id="service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper focus:outline-none focus:border-ember"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember"
                     >
                       {SERVICE_PACKAGES.map((pkg) => (
                         <option key={pkg.id} value={pkg.title} className="bg-ink text-paper">
@@ -306,7 +375,7 @@ function ContactPage() {
                       id="budget"
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper focus:outline-none focus:border-ember"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember"
                     >
                       <option value="Rp 2jt - 4jt" className="bg-ink text-paper">Rp 2jt - 4jt</option>
                       <option value="Rp 4jt - 8jt" className="bg-ink text-paper">Rp 4jt - 8jt</option>
@@ -328,30 +397,28 @@ function ContactPage() {
                     placeholder="Jelaskan kebutuhan sistem, target jadwal, atau informasi posisi yang ingin didiskusikan..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-ink border border-ink-raised text-xs sm:text-sm text-paper placeholder:text-muted-ink/50 focus:outline-none focus:border-ember focus-visible:ring-2 focus-visible:ring-ember resize-none"
                   />
                 </div>
 
                 <div className="flex items-center gap-2 font-mono text-[11px] text-muted-ink">
-                  <ShieldCheck className="size-3.5 text-turf" />
+                  <ShieldCheck className="size-3.5 text-turf shrink-0" />
                   <span>Informasi kontak hanya digunakan untuk keperluan komunikasi profesional.</span>
                 </div>
 
                 {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-ember font-mono text-xs uppercase tracking-wider font-bold text-ink hover:bg-amber-400 disabled:opacity-50 transition-colors shadow-sm"
-                >
-                  {isSubmitting ? (
-                    <span>Menyiapkan...</span>
-                  ) : (
-                    <>
-                      <span>Kirim Pesan</span>
-                      <Send className="size-3.5" />
-                    </>
-                  )}
-                </button>
+                <div className="space-y-2 pt-1">
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-ember font-mono text-xs uppercase tracking-wider font-bold text-ink hover:bg-amber-400 transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember"
+                  >
+                    <span>Buka di Aplikasi Email</span>
+                    <ArrowUpRight className="size-4" />
+                  </button>
+                  <p className="text-[11px] font-mono text-muted-ink text-center leading-relaxed">
+                    Formulir akan menyiapkan draf pesan pada aplikasi email Anda. Pesan baru terkirim setelah Anda menekan kirim di aplikasi email.
+                  </p>
+                </div>
               </form>
             )}
           </div>

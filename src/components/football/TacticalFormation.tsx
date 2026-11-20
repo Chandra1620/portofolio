@@ -246,8 +246,9 @@ export function TacticalFormation() {
               <button
                 key={player.name}
                 type="button"
+                aria-pressed={activePlayer.name === player.name}
                 onClick={() => setActivePlayer(player)}
-                className={`group flex flex-col items-center transition-all ${
+                className={`group flex flex-col items-center transition-all rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                   activePlayer.name === player.name ? "scale-110" : "hover:scale-105 opacity-85 hover:opacity-100"
                 }`}
               >
@@ -274,8 +275,9 @@ export function TacticalFormation() {
               <button
                 key={player.name}
                 type="button"
+                aria-pressed={activePlayer.name === player.name}
                 onClick={() => setActivePlayer(player)}
-                className={`group flex flex-col items-center transition-all ${
+                className={`group flex flex-col items-center transition-all rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember ${
                   activePlayer.name === player.name ? "scale-110" : "hover:scale-105 opacity-85 hover:opacity-100"
                 }`}
               >
@@ -302,8 +304,9 @@ export function TacticalFormation() {
               <button
                 key={player.name}
                 type="button"
+                aria-pressed={activePlayer.name === player.name}
                 onClick={() => setActivePlayer(player)}
-                className={`group flex flex-col items-center transition-all ${
+                className={`group flex flex-col items-center transition-all rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
                   activePlayer.name === player.name ? "scale-110" : "hover:scale-105 opacity-85 hover:opacity-100"
                 }`}
               >
@@ -330,8 +333,9 @@ export function TacticalFormation() {
               <button
                 key={player.name}
                 type="button"
+                aria-pressed={activePlayer.name === player.name}
                 onClick={() => setActivePlayer(player)}
-                className={`group flex flex-col items-center transition-all ${
+                className={`group flex flex-col items-center transition-all rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 ${
                   activePlayer.name === player.name ? "scale-110" : "hover:scale-105 opacity-85 hover:opacity-100"
                 }`}
               >
@@ -404,8 +408,9 @@ export function TacticalFormation() {
                 <button
                   key={sub.name}
                   type="button"
+                  aria-pressed={activePlayer.name === sub.name}
                   onClick={() => setActivePlayer(sub)}
-                  className={`px-3 py-1.5 rounded-lg font-mono text-xs border transition-all flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-lg font-mono text-xs border transition-all flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember ${
                     activePlayer.name === sub.name
                       ? "bg-ember/20 text-ember border-ember font-bold"
                       : "bg-paper/5 text-paper/80 border-paper/10 hover:border-paper/30"
