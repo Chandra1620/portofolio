@@ -18,13 +18,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Profil lengkap Chandra Apriyanto — Lulusan D4 Rekayasa Perangkat Lunak POLINDRA. Pengalaman 5 proyek web dan mobile dengan fokus backend Laravel, REST API, PostgreSQL, MySQL, dan Flutter.",
+          "Profil lengkap Chandra Apriyanto — Lulusan D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80) & Founder Pepra Lab. Pengalaman 8 proyek web dan mobile dengan fokus Laravel, Flutter, React, Supabase, dan PostgreSQL.",
       },
       { property: "og:title", content: "Tentang Chandra Apriyanto | Profil & Keahlian" },
       {
         property: "og:description",
         content:
-          "Kenali latar belakang pendidikan D4 RPL POLINDRA, prinsip kerja, dan penguasaan teknologi Chandra Apriyanto.",
+          "Kenali latar belakang pendidikan D4 RPL POLINDRA (IPK 3.80), peran Founder di Pepra Lab, dan penguasaan teknologi Chandra Apriyanto.",
       },
     ],
   }),
@@ -81,7 +81,7 @@ function AboutPage() {
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-2">
             <span className="font-mono text-xs uppercase tracking-wider text-muted-ink">
-              Profil Lengkap &bull; D4 RPL POLINDRA
+              Profil Lengkap &bull; D4 RPL POLINDRA (IPK 3.80) &bull; Founder Pepra Lab
             </span>
             <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-paper tracking-tight leading-tight">
               Rekayasa perangkat lunak berbasis logika terstruktur dan kebutuhan nyata.
@@ -94,15 +94,15 @@ function AboutPage() {
             </p>
 
             <p>
-              Bagi saya, software engineering adalah seni menyatukan presisi logika dengan kepraktisan dunia nyata. Mengawali pendidikan di bidang teknik kejuruan (SMK TKR), saya terbiasa memahami cara kerja sistem mekanis dari setiap komponen terkecilnya. Pola pikir sistematis tersebut kemudian saya kembangkan saat menempuh studi D4 Rekayasa Perangkat Lunak di Politeknik Negeri Indramayu (POLINDRA).
+              Bagi saya, software engineering adalah seni menyatukan presisi logika dengan kepraktisan dunia nyata. Mengawali pendidikan di bidang teknik kejuruan (SMK Malaka Jakarta - TKR), saya terbiasa memahami cara kerja sistem mekanis dari setiap komponen terkecilnya. Pola pikir sistematis tersebut kemudian saya kembangkan saat menempuh studi D4 Rekayasa Perangkat Lunak di Politeknik Negeri Indramayu (POLINDRA) hingga lulus dengan predikat sangat memuaskan (IPK 3.80).
             </p>
 
             <p>
-              Fokus utama saya berada pada pengembangan backend menggunakan Laravel dan PHP, pengelolaan basis data relasional PostgreSQL (Supabase/DBeaver) dan MySQL, perancangan REST API yang aman, integrasi payment gateway, serta implementasi algoritma pengambilan keputusan SPK metode Simple Additive Weighting (SAW).
+              Sejak 2023, saya telah menyelesaikan 8 proyek aplikasi web dan mobile. Sebagai salah satu Founder di Pepra Lab, saya memimpin pengembangan produk digital SaaS pendidikan dan menangani klien seperti modernisasi portal berita Cuplik.com ke Laravel 13, PostgreSQL, dan Tailwind CSS 4 berarsitektur MVC. Saya juga mengembangkan aplikasi undangan digital Buwuh.com berbasis React 19, TypeScript, dan TanStack Query, serta aplikasi kepegawaian SIMPEG Mobile PERUMDAM Tirta Darma Ayu untuk 7 peran pengguna menggunakan Flutter dan Supabase.
             </p>
 
             <p>
-              Di sisi antarmuka, saya merancang pengalaman pengguna yang responsif dan cepat menggunakan Tailwind CSS, JavaScript, dan Flutter/Dart. Saya selalu mengedepankan pengujian alur kerja menyeluruh, struktur kode bersih, dan komunikasi yang terbuka saat berkolaborasi dalam tim.
+              Fokus utama saya berada pada arsitektur backend Laravel, perancangan basis data PostgreSQL/MySQL, implementasi REST API yang aman (RBAC &amp; sanitasi input anti-XSS), integrasi notifikasi multi-kanal (OneSignal &amp; FCM), serta algoritma pengambilan keputusan SPK metode Simple Additive Weighting (SAW). Saya selalu mengedepankan pengujian end-to-end, struktur kode bersih, dan komunikasi yang terbuka saat berkolaborasi dalam tim.
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ function AboutPage() {
           description="Daftar keahlian backend, basis data, antarmuka web, aplikasi mobile, dan penguasaan tooling yang saya gunakan pada proyek nyata."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {SKILL_CATEGORIES.map((cat) => (
             <div
               key={cat.category}
@@ -239,7 +239,7 @@ function AboutPage() {
               to="/projects"
               className="inline-flex items-center justify-center rounded-lg border border-ink-raised bg-ink-soft px-5 py-3 font-mono text-xs uppercase tracking-wider text-paper hover:border-paper/30 transition-colors"
             >
-              Lihat 5 Proyek Saya
+              Lihat 8 Proyek Saya
             </Link>
           </div>
         </div>

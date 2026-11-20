@@ -21,7 +21,7 @@ import type {
 export const PERSONAL_INFO = {
   name: "Chandra Apriyanto",
   fullName: "Chandra Apriyanto",
-  role: "Fullstack Web & Mobile Developer",
+  role: "Fullstack Developer & Mobile Developer",
   location: "Indramayu, Jawa Barat",
   phone: "0895-3789-67621",
   whatsapp: "+62895378967621",
@@ -33,20 +33,21 @@ export const PERSONAL_INFO = {
   instagram: "https://instagram.com/chandraapriyanto",
   calendly: "https://calendly.com/chandraapriyanto/30min",
   cvFile: "/Chandra-Apriyanto-CV.pdf",
+  gpa: "IPK 3.80",
   positioning:
-    "Fullstack Web & Mobile Developer yang fokus membangun backend Laravel, REST API, dan basis data PostgreSQL/MySQL yang reliabel — dari sistem pendukung keputusan hingga aplikasi layanan skala industri.",
+    "Fullstack Developer & Mobile Developer lulusan D4 RPL POLINDRA (IPK 3.80) dan Founder Pepra Lab. Berpengalaman mengerjakan 8 proyek aplikasi web dan mobile sejak 2023 berbasis Laravel, Flutter, React, Supabase, dan PostgreSQL/MySQL.",
   summary:
-    "Lulusan D4 Rekayasa Perangkat Lunak dari Politeknik Negeri Indramayu (POLINDRA) dengan rekam jejak mengerjakan 5 proyek sistem web dan mobile sejak 2023. Menguasai arsitektur backend Laravel, perancangan skema PostgreSQL dan MySQL, implementasi REST API, integrasi payment gateway, hingga algoritma Simple Additive Weighting (SAW). Berawal dari latar belakang kejuruan mekanis (SMK TKR), saya membawa ketelitian teknis, disiplin analisis masalah, dan komitmen tinggi pada kualitas kode dalam setiap proyek.",
+    "Lulusan D4 Rekayasa Perangkat Lunak Politeknik Negeri Indramayu (IPK 3.80). Berpengalaman mengerjakan 8 proyek aplikasi web dan mobile sejak 2023, dari frontend developer hingga fullstack dan mobile developer. Terbiasa membangun sistem berbasis Laravel, Flutter, dan React dengan REST API, PostgreSQL/MySQL, dan Supabase, termasuk dashboard analitik real-time, CMS multi-peran, dan notifikasi multi-kanal. Terbiasa bekerja dalam tim menggunakan Git, menguji aplikasi secara end-to-end, dan cepat beradaptasi dengan teknologi baru untuk menghasilkan solusi digital yang rapi, aman, dan bermanfaat bagi pengguna.",
   availability: "Terbuka untuk posisi Full-time, Kontrak & Proyek Freelance",
   portraitImage: portrait,
   heroImage: heroFeature,
 };
 
 export const HIGHLIGHT_STATS = [
-  { value: "5 Sistem", label: "Aplikasi Web & Mobile", sub: "Proyek Nyata & Magang Industri" },
-  { value: "8 Kriteria", label: "Metode SAW Multi-Kriteria", sub: "Proyek Akhir D4 RPL POLINDRA" },
-  { value: "PostgreSQL", label: "Database Relasional & Cloud", sub: "Supabase, MySQL & DBeaver" },
-  { value: "ACID & API", label: "Payment Gateway & REST API", sub: "Keamanan Transaksi & Webhook" },
+  { value: "8 Proyek", label: "Aplikasi Web & Mobile", sub: "Produksi, Startup & Industri" },
+  { value: "IPK 3.80", label: "D4 RPL POLINDRA", sub: "Lulusan Rekayasa Perangkat Lunak" },
+  { value: "Founder", label: "Pepra Lab", sub: "Startup Produk Digital & Web" },
+  { value: "Fullstack", label: "Laravel, Flutter & React", sub: "Supabase, REST API & PostgreSQL" },
 ];
 
 export const WORK_PRINCIPLES = [
@@ -54,52 +55,469 @@ export const WORK_PRINCIPLES = [
     number: "01",
     title: "Struktur Bersih & Terpisah (Separation of Concerns)",
     description:
-      "Memisahkan logika bisnis ke dalam dedicated Service Classes dan Repository Pattern agar controller tetap ramping, kode mudah dibaca, serta memudahkan penulisan unit test.",
+      "Menerapkan pola arsitektur MVC dan Service-Repository pattern agar controller tetap ramping, logika bisnis terisolasi, kode mudah dibaca, serta memudahkan penulisan unit test.",
   },
   {
     number: "02",
-    title: "Integritas Data & Transaksi Atomik (ACID)",
+    title: "Keamanan Berlapis & Sanitasi Input (Security-First)",
     description:
-      "Merancang skema database yang ternormalisasi dengan foreign keys yang tepat, serta selalu membungkus pemrosesan finansial dan pembaruan multi-tabel dalam database transactions.",
+      "Mengamankan sistem dengan sanitasi input kustom pencegah XSS, filter bot traffic, proteksi manipulasi suara polling, Keystore/Keychain device storage, dan Role-Based Access Control (RBAC) yang ketat.",
   },
   {
     number: "03",
-    title: "Solusi Praktis Berorientasi Pengguna",
+    title: "Sinkronisasi Real-Time & Event-Driven",
     description:
-      "Aplikasi terbaik adalah aplikasi yang benar-benar memecahkan masalah di lapangan. Saya memprioritaskan antarmuka yang cepat, responsif di ponsel/tablet, dan minim gesekan bagi operator.",
+      "Mengoptimalkan pengalaman pengguna dengan notifikasi multi-kanal (OneSignal, FCM, notifikasi lokal terjadwal) dan integrasi websocket real-time via Supabase Realtime.",
   },
   {
     number: "04",
-    title: "Kedisiplinan Version Control & Tim",
+    title: "Pengujian Menyeluruh (End-to-End Testing)",
     description:
-      "Terbiasa menerapkan branching model Git yang rapi, pesan commit yang deskriptif dan terstruktur, serta koordinasi kontrak REST API yang jelas saat berkolaborasi lintas divisi.",
+      "Memastikan setiap alur bisnis teruji dari hulu ke hilir: simulasi transaksi, validasi input batas, penanganan edge-case, dan stabilitas server sebelum rilis ke lingkungan produksi.",
   },
 ];
 
 export const FUN_FACTS = [
   {
+    icon: "🚀",
+    fact: "Founder di Pepra Lab — Menginisiasi startup teknologi tahap awal bersama 4 co-founder, menangani perancangan produk SaaS pendidikan hingga website company profile dan portal berita klien.",
+  },
+  {
     icon: "⚽",
-    fact: "Penggemar sepak bola & taktik lapangan — Mengagumi peran playmaker nomor 10 yang membaca ruang, mengatur tempo, dan menghubungkan lini. Filosofi visi dan distribusi bola ini saya terapkan saat merancang arsitektur data sistem.",
+    fact: "Penggemar sepak bola & taktik lapangan — Mengagumi peran playmaker nomor 10 yang membaca ruang, mengatur tempo, dan menghubungkan lini. Filosofi visi dan distribusi bola ini saya terapkan saat merancang arsitektur sistem.",
   },
   {
     icon: "🔧",
     fact: "Alumni SMK Teknik Kendaraan Ringan — Pengalaman membongkar mesin mekanis melatih logika diagnosis sistem yang terstruktur, teliti hingga ke detail terkecil, dan tahan banting saat debugging error.",
   },
   {
-    icon: "💻",
-    fact: "Eksplorasi Mikrokontroler & Simulasi Wokwi — Senang merangkai logika IoT virtual (ESP32/Arduino) di waktu luang untuk mengamati komunikasi data sensor secara real-time.",
-  },
-  {
     icon: "📱",
-    fact: "Antusias dengan Flutter & Dart — Menikmati fleksibilitas membangun antarmuka mobile multi-platform untuk Android dan iOS dengan satu basis kode yang efisien.",
+    fact: "Eksplorasi Mobile & IoT — Menguasai Flutter & Dart untuk aplikasi kepegawaian multi-role, serta simulasi logika mikrokontroler (ESP32/Arduino) di platform Wokwi di waktu luang.",
   },
 ];
 
 export const PROJECTS: Project[] = [
   {
+    slug: "redesign-portal-berita-cuplik",
+    title: "Redesign Portal Berita Cuplik.com",
+    tagline: "Modernisasi Portal Media Berita Skala Produksi dengan Laravel 13, PostgreSQL & Tailwind CSS 4",
+    category: "Web App",
+    client: "Cuplik.com · Pepra Lab",
+    year: "2026",
+    duration: "Oktober — November 2026",
+    role: "Fullstack Developer",
+    team: "Pepra Lab",
+    stack: [
+      "Laravel 13",
+      "PostgreSQL",
+      "Tailwind CSS 4",
+      "PHP",
+      "MVC",
+      "REST API",
+      "Anti-XSS Sanitization",
+      "PDF Generator",
+    ],
+    thumbnail: workPulse,
+    featured: true,
+    metrics: ["Laravel 13 & MVC", "Real Count Pilkada", "Proteksi XSS & Bot Filter"],
+    summary:
+      "Membangun ulang portal media Cuplik.com dari PHP native 7.4 ke Laravel 13, PostgreSQL, dan Tailwind CSS 4 berarsitektur MVC dengan desain bergaya koran modern. Dilengkapi live search, polling proteksi manipulasi suara, Real Count Pilkada, kanal aspirasi warga, unduh artikel PDF, CMS multi-peran (Super Admin, Admin, Redaktur, Member), sanitasi HTML kustom anti-XSS, dan penghitung pembaca unik berfilter bot.",
+    liveUrl: "https://cuplik.com",
+    repoUrl: "https://github.com/chandraapriyanto/cuplik-portal-laravel",
+    caseStudy: {
+      overview:
+        "Cuplik.com merupakan portal media berita yang sebelumnya menggunakan PHP native 7.4 dengan tampilan lama dan arsitektur belum terstruktur. Melalui Pepra Lab, proyek redesign ini bertujuan memodernisasi performa, desain visual koran kontemporer, dan keamanan sistem secara menyeluruh.",
+      problem:
+        "Tampilan lama belum responsif di ponsel modern, rentan terhadap celah keamanan input artikel (XSS), belum memiliki proteksi kecurangan voting suara pada polling, serta redaksi kesulitan melacak produktivitas jurnalis secara transparan.",
+      objectives: [
+        "Membangun ulang seluruh arsitektur portal berita dari PHP native 7.4 ke Laravel 13, PostgreSQL, dan Tailwind CSS 4 berarsitektur MVC.",
+        "Mengembangkan fitur portal publik: live search instan, polling dengan proteksi manipulasi suara, tabulasi data Real Count Pilkada, kanal aspirasi warga, dan unduh artikel format PDF.",
+        "Membangun CMS multi-peran (Super Admin, Admin, Redaktur, Member) lengkap dengan sistem moderasi berita, analitik produktivitas redaksi, dan pengajuan iklan mandiri.",
+        "Menerapkan pengamanan sanitasi HTML kustom untuk mencegah serangan XSS, middleware akses CMS berjenjang, dan penghitungan pembaca unik dengan filter bot.",
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Audit Basis Data & Migrasi Skema ke PostgreSQL",
+          description:
+            "Menganalisis database PHP native lama, merancang skema relasional baru di PostgreSQL dengan normalisasi tabel artikel, kategori, tags, author, voting, dan iklan.",
+        },
+        {
+          step: "02",
+          title: "Implementasi Arsitektur MVC Laravel 13 & Service Layer",
+          description:
+            "Menyusun controller ramping dengan memisahkan logika moderasi berita, penghitungan pembaca unik, dan kalkulasi polling ke dedicated service classes.",
+        },
+        {
+          step: "03",
+          title: "Pengembangan Antarmuka Koran Modern dengan Tailwind CSS 4",
+          description:
+            "Merancang layout grid responsif ala media modern yang nyaman dibaca di mobile dan desktop, tipografi editorial elegan, serta mode pratinjau berita.",
+        },
+        {
+          step: "04",
+          title: "Pembangunan Fitur Interaktif & Modul Real Count Pilkada",
+          description:
+            "Membangun komponen tabulasi Real Count per-TPS/kecamatan, fitur live search AJAX tanpa reload, voting polling terenkripsi IP/cookie, dan generator PDF artikel.",
+        },
+        {
+          step: "05",
+          title: "Pengamanan Sanitasi HTML Anti-XSS & Filter Bot",
+          description:
+            "Menerapkan sanitasi input artikel kustom pada editor berita untuk mengeliminasi tag berbahaya (XSS), serta middleware filter crawler bot pada pencatatan view count.",
+        },
+      ],
+      technicalDecisions: [
+        {
+          decision: "Migrasi ke Laravel 13 & PostgreSQL",
+          reason:
+            "Menghadirkan performa eksekusi query relasional yang jauh lebih stabil, ORM Eloquent yang ekspresif, dan sistem migrasi database yang aman untuk jangka panjang.",
+          alternative: "Mempertahankan PHP native dengan patch keamanan parsial (rawan hutang teknis).",
+        },
+        {
+          decision: "Sanitasi HTML Kustom & Filter Bot pada View Count",
+          reason:
+            "Mencegah jurnalis atau kontributor luar menyisipkan skrip berbahaya via WYSIWYG editor dan memastikan analitik jumlah pembaca artikel mencerminkan traffic manusia asli.",
+          alternative: "Menggunakan default strip_tags sederhana (merusak format styling artikel redaksi).",
+        },
+      ],
+      keyFeatures: [
+        {
+          title: "CMS Multi-Peran (4 Tingkat Akses)",
+          description:
+            "Super Admin, Admin, Redaktur, dan Member memiliki workspace terpisah dengan alur persetujuan (approval) berita yang rapi dan analitik produktivitas tim redaksi.",
+        },
+        {
+          title: "Tabulasi Real Count Pilkada & Polling Aman",
+          description:
+            "Sistem tabulasi hasil suara pemilu cepat serta sistem polling publik dengan algoritma pencegahan manipulasi suara ganda.",
+        },
+        {
+          title: "Live Search & Unduh Berita PDF",
+          description:
+            "Pencarian berita real-time dengan pencocokan kata kunci cepat serta konversi artikel berita menjadi dokumen PDF siap arsip.",
+        },
+        {
+          title: "Kanal Aspirasi Warga & Pengajuan Iklan Mandiri",
+          description:
+            "Portal keterlibatan masyarakat untuk menyampaikan aspirasi daerah dan sistem pengajuan slot iklan bagi mitra bisnis lokal.",
+        },
+      ],
+      challenges: [
+        {
+          issue: "Migrasi ribuan artikel berita lama yang memiliki format HTML tidak standar dari sistem legacy.",
+          solution:
+            "Menulis command artisan Laravel transformer khusus yang membersihkan tag HTML rusak, menyelaraskan path gambar lama, dan memetakan metadata ke skema PostgreSQL baru.",
+        },
+      ],
+      results: [
+        {
+          metric: "Modernisasi 100%",
+          description: "Portal Cuplik.com sukses bertransisi penuh ke Laravel 13 MVC dan Tailwind CSS 4.",
+        },
+        {
+          metric: "Celah XSS Tereliminasi",
+          description: "Seluruh konten artikel lolos uji sanitasi HTML kustom tanpa mengorbankan formatting teks.",
+        },
+        {
+          metric: "4 Role Redaksi Terintegrasi",
+          description: "Manajemen penerbitan berita kini terstruktur dari draft jurnalis hingga persetujuan redaktur.",
+        },
+        {
+          metric: "Real Count & Polling Terlindungi",
+          description: "Data tabulasi pilkada dan voting masyarakat bebas dari manipulasi bot.",
+        },
+      ],
+      lessonsLearned:
+        "Merancang portal berita skala produksi menuntut keseimbangan antara kemudahan tim redaksi menerbitkan konten dinamis dengan ketegasan sanitasi keamanan sistem agar terlindung dari eksploitasi XSS dan bot manipulatif.",
+      gallery: [
+        { title: "Portal Berita Cuplik.com", caption: "Desain responsif bergaya koran modern dengan Tailwind CSS 4", image: workPulse },
+        { title: "Dashboard CMS Redaksi", caption: "Panel moderasi berita, analitik produktivitas, dan manajemen peran", image: workLumen },
+      ],
+    },
+  },
+  {
+    slug: "buwuh-platform-undangan-digital",
+    title: "Buwuh.com — Platform Undangan Digital",
+    tagline: "Aplikasi Undangan Digital Modern Berbasis React 19, TypeScript, Tailwind CSS 4 & TanStack Query",
+    category: "Web App",
+    client: "Buwuh.com",
+    year: "2026",
+    duration: "Agustus — Oktober 2026",
+    role: "Frontend Developer",
+    team: "Tim Produk Buwuh.com",
+    stack: [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "TanStack React Query",
+      "Axios",
+      "REST API",
+      "RBAC",
+    ],
+    thumbnail: workSolace,
+    featured: true,
+    metrics: ["React 19 & TypeScript", "TanStack Query Cache", "RBAC & Magic Link"],
+    summary:
+      "Membangun dashboard pengelolaan undangan dan langganan serta modul RSVP, buku tamu, dan hadiah pada aplikasi undangan digital berbasis React 19, TypeScript, dan Tailwind CSS 4. Mengintegrasikan fitur yang semula memakai data mock dengan backend REST API via Axios dan TanStack React Query, menerapkan RBAC petugas, magic link akses instan, unggah media, pemisahan catatan buwuh mandiri vs berbasis event, landing page responsif, dan perbaikan alur login Facebook OAuth.",
+    liveUrl: "https://buwuh.com",
+    repoUrl: "https://github.com/chandraapriyanto/buwuh-frontend-react",
+    caseStudy: {
+      overview:
+        "Buwuh.com adalah platform SaaS undangan digital yang memfasilitasi pasangan calon pengantin untuk merancang undangan interaktif, mengelola konfirmasi kehadiran tamu (RSVP), menerima amplop digital (buwuh), serta mengatur buku tamu di meja resepsi acara.",
+      problem:
+        "Aplikasi sebelumnya masih menggunakan data tiruan (mock data) tanpa integrasi API riil, manajemen state client sering mengalami refetch berlebih, belum ada hak akses berjenjang bagi petugas buku tamu di venue, serta alur login Facebook mengalami kegagalan callback token.",
+      objectives: [
+        "Membangun antarmuka dashboard manajemen undangan dan langganan paket pengguna berbasis React 19, TypeScript, dan Tailwind CSS 4.",
+        "Mengembangkan modul interaktif: formulir RSVP dinamis, buku tamu digital, dan amplop hadiah/hadiah transfer.",
+        "Menggantikan data mock dengan integrasi REST API backend menggunakan Axios dan TanStack React Query untuk state synchronization yang efisien.",
+        "Menerapkan RBAC untuk petugas buku tamu, magic link akses instan tanpa password, serta pemisahan catatan buwuh mandiri dengan catatan berbasis event.",
+        "Membangun landing page Buwuh.com dan memperbaiki alur autentikasi Facebook OAuth Login.",
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Setup Arsitektur React 19 & Konfigurasi TypeScript",
+          description:
+            "Menyusun struktur folder modular, deklarasi tipe TypeScript yang ketat untuk payload API undangan, tamu, RSVP, dan transaksi hadiah.",
+        },
+        {
+          step: "02",
+          title: "Migrasi Data Mock ke TanStack React Query & Axios",
+          description:
+            "Menghubungkan endpoint REST API backend dengan query caching otomatis, optimistic updates, dan penanganan status error/loading yang mulus.",
+        },
+        {
+          step: "03",
+          title: "Pembangunan Modul RSVP & Buku Tamu Digital",
+          description:
+            "Merancang formulir konfirmasi kehadiran interaktif dengan barcode scan check-in di meja penerima tamu acara pernikahan.",
+        },
+        {
+          step: "04",
+          title: "Implementasi RBAC Petugas & Magic Link Akses",
+          description:
+            "Membangun alur otorisasi khusus di mana petugas venue dapat mengakses scanner buku tamu via tautan magic link tanpa perlu registrasi akun penuh.",
+        },
+        {
+          step: "05",
+          title: "Landing Page & Perbaikan Login Facebook",
+          description:
+            "Membangun landing page modern dan memperbaiki penanganan redirect URI serta pertukaran access token pada integrasi Facebook SDK/OAuth.",
+        },
+      ],
+      technicalDecisions: [
+        {
+          decision: "Pemanfaatan TanStack React Query untuk Server State",
+          reason:
+            "Menghilangkan boilerplate useEffect yang berulang, menyediakan caching otomatis, background refetching saat window focus, dan mutasi optimistik.",
+          alternative: "Redux / Context API murni (terlalu banyak boilerplate dan rawan re-render tidak perlu).",
+        },
+        {
+          decision: "Akses Magic Link untuk Petugas Buku Tamu",
+          reason:
+            "Mempermudah panitia resepsi di hari H acara yang sering kali berganti orang, sehingga cukup membuka link unik terenkripsi untuk mencatat kehadiran tamu.",
+          alternative: "Wajib login email & password (memperlambat alur operasional penerimaan tamu di venue).",
+        },
+      ],
+      keyFeatures: [
+        {
+          title: "Dashboard Pengelolaan Undangan & Langganan",
+          description:
+            "Manajemen tema undangan, susunan acara, galeri pre-wedding, musik latar, dan pemantauan masa aktif paket langganan SaaS.",
+        },
+        {
+          title: "Modul RSVP & Hadiah Digital Terintegrasi",
+          description:
+            "Pencatatan konfirmasi kehadiran tamu secara otomatis dan pengelolaan nomor rekening/QRIS hadiah dengan rekapitulasi nominal transparan.",
+        },
+        {
+          title: "Buku Tamu Check-in & RBAC Petugas",
+          description:
+            "Pencatatan tamu hadir di lokasi acara dengan scan QR code undangan dan hak akses terbatas khusus petugas meja registrasi.",
+        },
+        {
+          title: "Pemisahan Catatan Buwuh Mandiri vs Berbasis Event",
+          description:
+            "Pengguna dapat mencatat amplop buwuh kondangan pribadi secara independen maupun mencatat amplop yang diterima pada pesta pernikahan.",
+        },
+      ],
+      challenges: [
+        {
+          issue: "Koneksi internet di lokasi pesta pernikahan sering kali tidak stabil saat petugas melakukan check-in tamu.",
+          solution:
+            "Mengimplementasikan TanStack Query offline cache dengan persistensi local storage dan retry mechanism saat koneksi tersambung kembali.",
+        },
+      ],
+      results: [
+        {
+          metric: "100% Data Riil",
+          description: "Seluruh modul dashboard dan RSVP sukses bermigrasi dari data mock ke REST API backend.",
+        },
+        {
+          metric: "Performa React 19",
+          description: "Waktu interaksi UI gegas dengan pemanfaatan React 19 concurrent features dan Tailwind CSS 4.",
+        },
+        {
+          metric: "Magic Link Efisien",
+          description: "Petugas venue dapat langsung mengoperasikan buku tamu tanpa login kredensial rumit.",
+        },
+        {
+          metric: "Facebook Login Stabil",
+          description: "Alur OAuth Facebook Login berhasil diperbaiki dengan tingkat keberhasilan login 100%.",
+        },
+      ],
+      lessonsLearned:
+        "Memadukan React 19 dengan TypeScript dan TanStack React Query menciptakan standar pengembangan frontend yang sangat tangguh terhadap perubahan skema API backend.",
+      gallery: [
+        { title: "Dashboard Pengantin Buwuh.com", caption: "Antarmuka manajemen undangan, tamu, dan buku tamu", image: workSolace },
+        { title: "Landing Page & RSVP", caption: "Tampilan landing page berkonversi tinggi dan formulir kehadiran", image: workCadence },
+      ],
+    },
+  },
+  {
+    slug: "simpeg-mobile-tirta-darma-ayu",
+    title: "SIMPEG Mobile — PERUMDAM Tirta Darma Ayu",
+    tagline: "Aplikasi Kepegawaian Mobile Flutter untuk 7 Peran Pengguna Terintegrasi Supabase & Laravel REST API",
+    category: "Mobile App",
+    client: "PERUMDAM Tirta Darma Ayu",
+    year: "2026",
+    duration: "Agustus — September 2026",
+    role: "Mobile Developer (Flutter)",
+    team: "Tim Pengembang SIMPEG",
+    stack: [
+      "Flutter",
+      "Dart",
+      "Supabase",
+      "Laravel REST API",
+      "OneSignal",
+      "Firebase Cloud Messaging",
+      "Supabase Realtime",
+    ],
+    thumbnail: workLumen,
+    featured: true,
+    metrics: ["7 Peran Pengguna", "18 Status Pelanggaran", "Notifikasi Multi-Kanal"],
+    summary:
+      "Membangun aplikasi kepegawaian mobile dengan Flutter untuk 7 peran pengguna (pegawai hingga direktur utama), terintegrasi dengan Supabase dan Laravel REST API. Mengembangkan modul pengaduan pelanggaran karyawan berjenjang (18 status alur) dengan unggah bukti foto, dokumen, dan rekaman suara ke Supabase Storage, serta penerbitan SK sanksi. Mengimplementasikan autentikasi dengan fitur Remember Me terenkripsi (Keystore/Keychain), pembagian kata sandi massal, notifikasi multi-kanal (OneSignal, FCM, notifikasi lokal terjadwal), dan sinkronisasi real-time via Supabase Realtime.",
+    liveUrl: "https://simpeg.tirtadarmaayu.co.id",
+    repoUrl: "https://github.com/chandraapriyanto/simpeg-mobile-flutter",
+    caseStudy: {
+      overview:
+        "PERUMDAM Tirta Darma Ayu (BUMD Air Minum Indramayu) mengelola ratusan pegawai di berbagai kantor cabang dan instalasi pengolahan air. SIMPEG Mobile dibangun untuk memfasilitasi monitoring kepegawaian, disiplin kerja, dan eskalasi kasus internal secara transparan.",
+      problem:
+        "Penanganan laporan pelanggaran disiplin pegawai sebelumnya lambat karena alur disposisi birokrasi manual, bukti rekaman suara/foto tercecer di grup chat, serta atasan tidak menerima notifikasi instan saat laporan darurat diajukan.",
+      objectives: [
+        "Membangun aplikasi mobile cross-platform (Android & iOS) dengan Flutter untuk 7 peran pengguna (Pegawai, Supervisor, Kepala Bagian, HRD, SPI, Direktur, hingga Direktur Utama).",
+        "Mengembangkan modul pengaduan pelanggaran karyawan berjenjang dengan 18 status alur kerja (mulai dari verifikasi bukti, investigasi, mediasi, hingga terbit SK sanksi resmi).",
+        "Mengintegrasikan Supabase Storage untuk upload bukti multi-format: foto kamera, dokumen PDF, dan file rekaman audio pengakuan/saksi.",
+        "Menerapkan sistem autentikasi aman dengan fitur Remember Me terenkripsi pada hardware Keystore (Android) / Keychain (iOS) dan distribusi sandi massal.",
+        "Mengintegrasikan arsitektur notifikasi multi-kanal (OneSignal, Firebase Cloud Messaging, dan notifikasi lokal terjadwal) serta sinkronisasi data via Supabase Realtime.",
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Pemetaan Alur 18 Status & State Machine",
+          description:
+            "Merumuskan diagram status transisi laporan pelanggaran bersama divisi kepegawaian dan hukum PERUMDAM untuk memastikan setiap disposisi memiliki penanggung jawab resmi.",
+        },
+        {
+          step: "02",
+          title: "Pengembangan Antarmuka Flutter & Role-Based Views",
+          description:
+            "Merancang antarmuka terstruktur dengan Flutter di mana dashboard, menu tindakan, dan hak approval menyesuaikan secara dinamis dengan 1 dari 7 peran pengguna.",
+        },
+        {
+          step: "03",
+          title: "Integrasi Supabase Storage & Upload Audio/Dokumen",
+          description:
+            "Membangun audio recorder internal di aplikasi Flutter dan mengunggah rekaman suara serta berkas bukti terenkripsi ke bucket Supabase Storage.",
+        },
+        {
+          step: "04",
+          title: "Pengamanan Autentikasi dengan Keystore/Keychain",
+          description:
+            "Menyimpan token sesi dan kredensial 'Remember Me' menggunakan flutter_secure_storage yang memanfaatkan enkripsi hardware bawaan smartphone.",
+        },
+        {
+          step: "05",
+          title: "Integrasi Notifikasi Multi-Kanal & Realtime Listener",
+          description:
+            "Menghubungkan OneSignal dan FCM untuk push notification saat status laporan berubah, serta Supabase Realtime stream agar badge notifikasi dan status terupdate instan.",
+        },
+      ],
+      technicalDecisions: [
+        {
+          decision: "Arsitektur Hibrida: Laravel REST API + Supabase Cloud",
+          reason:
+            "Logika bisnis inti, data penggajian, dan master kepegawaian diproses aman di server Laravel, sedangkan Supabase dimanfaatkan untuk menangani event Realtime dan storage berkas multimedia tanpa membebani server lokal.",
+          alternative: "Menyimpan seluruh rekaman audio dan dokumen di server hosting lokal (berisiko kehabisan disk dan bandwidth).",
+        },
+        {
+          decision: "Enkripsi Hardware Keystore / Keychain untuk Remember Me",
+          reason:
+            "Melindungi token autentikasi pejabat dan staf dari upaya extraction atau reverse engineering pada perangkat yang di-root/jailbreak.",
+          alternative: "Menyimpan token di SharedPreferences biasa (sangat rentan dicuri).",
+        },
+      ],
+      keyFeatures: [
+        {
+          title: "Modul Pengaduan Pelanggaran 18 Alur Berjenjang",
+          description:
+            "Sistem pelaporan lengkap dengan alur disposisi antar-pejabat, pencatatan kronologi, histori tindakan, hingga draft penerbitan Surat Keputusan (SK) sanksi.",
+        },
+        {
+          title: "Upload Bukti Multi-Format (Audio, Dokumen & Foto)",
+          description:
+            "Perekaman suara langsung dari aplikasi, upload dokumen PDF hasil pemeriksaan, dan foto bukti lapangan dengan viewer terintegrasi.",
+        },
+        {
+          title: "Notifikasi Multi-Kanal (OneSignal, FCM, Lokal)",
+          description:
+            "Pemberitahuan push otomatis ke smartphone pejabat pemeriksa saat ada laporan baru, serta notifikasi lokal pengingat batas waktu penyelesaian disposisi.",
+        },
+        {
+          title: "Akses 7 Peran Pengguna & Supabase Realtime",
+          description:
+            "Navigasi adaptif dari staf biasa hingga direksi dengan pembaruan status pengaduan dan badge notifikasi secara real-time tanpa reload.",
+        },
+      ],
+      challenges: [
+        {
+          issue: "Ukuran file rekaman suara pemeriksaan saksi sering kali besar dan memakan waktu upload saat sinyal pegawai lemah.",
+          solution:
+            "Menerapkan kompresi format audio AAC berbitrate optimal pada Flutter sebelum proses unggah ke Supabase Storage dimulai.",
+        },
+      ],
+      results: [
+        {
+          metric: "7 Peran Beroperasi",
+          description: "Seluruh level struktur organisasi PERUMDAM aktif menggunakan sistem dengan hak akses terisolasi.",
+        },
+        {
+          metric: "18 Status Terlacak",
+          description: "Tidak ada lagi laporan disiplin pegawai yang macet atau tidak diketahui status disposisinya.",
+        },
+        {
+          metric: "Audit Bukti Terpusat",
+          description: "Bukti rekaman suara dan dokumen tersimpan rapi di Supabase Storage siap diakses tim pemeriksa.",
+        },
+        {
+          metric: "Respon Real-Time",
+          description: "Notifikasi push OneSignal & FCM memastikan pejabat menerima info disposisi dalam hitungan detik.",
+        },
+      ],
+      lessonsLearned:
+        "Membangun aplikasi mobile enterprise memerlukan perhatian ketat pada aspek keamanan perangkat lokal (Keystore/Keychain), keandalan pengunggahan berkas media, dan kecepatan aliran informasi lewat push notification multi-kanal.",
+      gallery: [
+        { title: "SIMPEG Mobile PERUMDAM", caption: "Antarmuka aplikasi Flutter dengan alur 18 status pengaduan", image: workLumen },
+        { title: "Audio & Bukti Pengaduan", caption: "Player rekaman suara pemeriksaan saksi dan dokumen bukti", image: heroFeature },
+      ],
+    },
+  },
+  {
     slug: "spk-ukt-mahasiswa-baru",
     title: "Sistem Pendukung Keputusan Penentuan UKT Mahasiswa Baru",
-    tagline: "Sistem Pengambilan Keputusan Multi-Kriteria Metode Simple Additive Weighting (SAW)",
+    tagline: "Sistem Pengambilan Keputusan Multi-Kriteria Metode Simple Additive Weighting (SAW) Berbasis Web",
     category: "SPK & Algoritma",
     client: "Proyek Akhir — Politeknik Negeri Indramayu (POLINDRA)",
     year: "2026",
@@ -111,7 +529,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     metrics: ["8 Kriteria Penilaian", "Komputasi SAW <100ms", "32 Kasus Uji Validasi"],
     summary:
-      "Membangun sistem pendukung keputusan berbasis web menggunakan Laravel dan PostgreSQL (Supabase) dengan metode Simple Additive Weighting (SAW) untuk menentukan golongan UKT mahasiswa baru secara transparan, terukur, dan objektif.",
+      "Merancang dan membangun sistem pendukung keputusan berbasis web (Laravel + PostgreSQL/Supabase) dengan metode Simple Additive Weighting (SAW) untuk menentukan golongan UKT mahasiswa baru secara objektif. Mengembangkan REST API dan arsitektur hibrida, serta dashboard analitik real-time untuk mempercepat proses verifikasi dan monitoring data pendaftar, serta antarmuka responsif bagi tim verifikator desktop maupun mobile.",
     liveUrl: "https://spk-ukt-polindra.demo.app",
     repoUrl: "https://github.com/chandraapriyanto/spk-ukt-saw-laravel",
     caseStudy: {
@@ -234,10 +652,10 @@ export const PROJECTS: Project[] = [
     team: "Tim Engineering Bandung Techno Park",
     stack: ["Laravel", "PostgreSQL", "DBeaver", "REST API", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     thumbnail: workLumen,
-    featured: true,
+    featured: false,
     metrics: ["Integrasi Multi-Layanan", "Standarisasi REST API", "Manajemen DB via DBeaver"],
     summary:
-      "Mengembangkan dan memelihara modul aplikasi web multi-layanan di Bandung Techno Park menggunakan Laravel dan Tailwind CSS, membangun endpoint REST API, serta mengelola basis data PostgreSQL untuk kebutuhan lintas departemen.",
+      "Mengembangkan dan memelihara fitur aplikasi web multi-layanan menggunakan Laravel, HTML, CSS, JavaScript, dan Tailwind CSS. Mengimplementasikan REST API serta mengelola basis data PostgreSQL (DBeaver) untuk kebutuhan lintas modul aplikasi, serta melakukan pengujian dan perbaikan bug bersama tim sehingga aplikasi berjalan stabil di lingkungan produksi.",
     liveUrl: "https://mybtp.bandungtechnopark.com",
     repoUrl: "https://github.com/chandraapriyanto/mybtp-application-center",
     caseStudy: {
@@ -340,142 +758,21 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    slug: "sistem-pembayaran-spp-sekolah-alam",
-    title: "Sistem Pembayaran SPP Sekolah Alam Berbasis Website",
-    tagline: "Sistem Finansial Pembayaran Uang Sekolah Terintegrasi Payment Gateway",
-    category: "Web App",
-    client: "POLINDRA & Sekolah Alam",
-    year: "2024",
-    duration: "Maret — Juni 2024",
-    role: "Fullstack Developer",
-    team: "Proyek Kolaboratif POLINDRA",
-    stack: ["Laravel", "PHP", "MySQL", "Payment Gateway", "JavaScript", "Bootstrap"],
-    thumbnail: workSolace,
-    featured: true,
-    metrics: ["Midtrans Webhook", "DB::transaction Lock", "Generate Invoice PDF"],
-    summary:
-      "Mengembangkan sistem pembayaran SPP dengan Laravel dan MySQL, terintegrasi payment gateway untuk pemrosesan tagihan otomatis, verifikasi status transaksi real-time via webhook, dan cetak invoice PDF.",
-    liveUrl: "https://spp-sekolahalam.demo.app",
-    repoUrl: "https://github.com/chandraapriyanto/sistem-spp-sekolah-alam",
-    caseStudy: {
-      overview:
-        "Sekolah Alam mengelola administrasi iuran SPP bulanan ratusan siswa. Pengurus yayasan membutuhkan sistem pembayaran digital agar orang tua murid dapat membayar secara fleksibel dan pencatatan kas sekolah terdata secara transparan.",
-      problem:
-        "Sebelumnya, pembayaran dilakukan via transfer manual dengan konfirmasi foto slip transfer ke WhatsApp bendahara. Cara ini sering menyebabkan slip hilang, salah catat nominal, dan memakan waktu rekonsiliasi berjam-jam setiap bulannya.",
-      objectives: [
-        "Membangun aplikasi pembayaran berbasis web menggunakan Laravel dan basis data MySQL.",
-        "Mengintegrasikan payment gateway (Midtrans Snap) untuk menyediakan kanal bayar Virtual Account, QRIS, dan e-Wallet.",
-        "Menerapkan penanganan webhook asynchronous untuk memperbarui status tagihan secara otomatis.",
-        "Menyediakan generator kuitansi dan bukti bayar PDF resmi yang langsung dapat diunduh orang tua siswa.",
-      ],
-      process: [
-        {
-          step: "01",
-          title: "Pemodelan Skema Data Finansial",
-          description:
-            "Merancang tabel siswa, tagihan bulanan, histori transaksi, dan jurnal kas masuk dengan relasi foreign key yang aman di MySQL.",
-        },
-        {
-          step: "02",
-          title: "Pengembangan Generator Tagihan Otomatis",
-          description:
-            "Membangun sistem penagihan otomatis yang menghasilkan invoice SPP bulanan sesuai dengan kelas dan tahun ajaran siswa.",
-        },
-        {
-          step: "03",
-          title: "Integrasi API Payment Gateway & Webhook",
-          description:
-            "Menghubungkan Midtrans Snap API, membuat request token bayar, dan menangani callback webhook status (settlement, pending, expired, cancel).",
-        },
-        {
-          step: "04",
-          title: "Pengamanan Transaksi dengan DB::transaction",
-          description:
-            "Membungkus pembaruan status tagihan dan pencatatan mutasi kas dalam database transaction untuk mencegah kegagalan parsial data.",
-        },
-        {
-          step: "05",
-          title: "Generate Kuitansi PDF Resmi & Testing",
-          description:
-            "Mengimplementasikan library PDF generator untuk mencetak bukti lunas ber-QR code, serta menguji skenario gagal bayar dan simulasi jaringan putus.",
-        },
-      ],
-      technicalDecisions: [
-        {
-          decision: "Penerapan Database Transaction (ACID) pada Handler Webhook",
-          reason:
-            "Memastikan bahwa perubahan status tagihan menjadi 'Lunas' dan penambahan data ke buku kas masuk terjadi secara serentak (atomik). Jika salah satu query gagal, sistem melakukan rollback otomatis.",
-          alternative: "Query update terpisah tanpa transaction wrapper (berisiko status lunas tapi jurnal kas tidak tercatat).",
-        },
-        {
-          decision: "Validasi Signature Key pada Payload Webhook",
-          reason:
-            "Mencegah request palsu dari pihak luar yang mencoba memalsukan status pembayaran tanpa verifikasi SHA512 hash dari payment gateway.",
-          alternative: "Menerima webhook payload tanpa verifikasi signature (sangat rentan manipulasi keamanan).",
-        },
-      ],
-      keyFeatures: [
-        {
-          title: "Pembayaran Multi-Kanal Otomatis",
-          description: "Mendukung pembayaran via QRIS, Virtual Account Bank (BCA, Mandiri, BNI, BRI), dan e-Wallet secara fleksibel.",
-        },
-        {
-          title: "Verifikasi Lunas Real-Time via Webhook",
-          description: "Status tagihan otomatis berubah menjadi lunas dalam hitungan detik setelah transfer berhasil dilakukan tanpa perlu upload struk fisik.",
-        },
-        {
-          title: "Kuitansi Digital PDF Resmi",
-          description: "Invoice dan bukti pembayaran resmi terbit otomatis dengan kode unik verifikasi pembayaran.",
-        },
-        {
-          title: "Laporan Rekapitulasi Kas untuk Bendahara",
-          description: "Dashboard pemantauan tunggakan, total penerimaan kas bulanan, dan histori mutasi rekening.",
-        },
-      ],
-      challenges: [
-        {
-          issue: "Potensi pemanggilan webhook berulang (duplicate callback) dari penyedia payment gateway saat jaringan lambat.",
-          solution:
-            "Menerapkan mekanisme Idempotency Key dan pengecekan status awal sebelum menjalankan eksekusi update database.",
-        },
-      ],
-      results: [
-        {
-          metric: "Verifikasi Otomatis",
-          description: "Bendahara tidak perlu lagi mencocokkan mutasi rekening koran dan foto struk satu per satu.",
-        },
-        {
-          metric: "Transparansi Kas",
-          description: "Seluruh riwayat pembayaran tersimpan rapi dan dapat diexport sewaktu-waktu untuk audit pengurus yayasan.",
-        },
-        {
-          metric: "Kemudahan Orang Tua Siswa",
-          description: "Orang tua dapat memantau status iuran anak dan membayar secara praktis dari smartphone.",
-        },
-      ],
-      lessonsLearned:
-        "Keamanan sistem finansial berbasis web memerlukan pertahanan berlapis: validasi signature token, mekanisme idempotensi, database transaction, dan audit trail log yang jelas.",
-      gallery: [
-        { title: "Portal Pembayaran SPP", caption: "Halaman riwayat tagihan dan pilihan metode pembayaran online", image: workSolace },
-      ],
-    },
-  },
-  {
     slug: "sistem-sinkronisasi-kehadiran-pegawai",
     title: "Sistem Sinkronisasi Kehadiran Pegawai dengan Surat Tugas",
-    tagline: "Platform Manajemen Presensi & Validasi Surat Tugas Dinas Pegawai",
+    tagline: "Platform Manajemen Presensi & Validasi Surat Tugas Dinas Pegawai Berbasis Web",
     category: "Frontend & UI",
     client: "POLINDRA",
     year: "2024",
     duration: "Oktober — Desember 2024",
     role: "Frontend Developer",
-    team: "Tim Proyek POLINDRA (Frontend + Backend)",
+    team: "POLINDRA",
     stack: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind CSS", "REST API"],
     thumbnail: workCadence,
-    featured: true,
+    featured: false,
     metrics: ["Sinkronisasi Status Dinas", "In-Browser PDF Preview", "UI Responsif Multi-Device"],
     summary:
-      "Membangun antarmuka web responsif untuk sinkronisasi data presensi pegawai kampus dengan surat perintah tugas dinas, mencakup form pengajuan, pratinjau dokumen in-browser, dan integrasi REST API.",
+      "Membangun antarmuka responsif dengan HTML, CSS, JavaScript, Bootstrap, dan Tailwind agar data kehadiran mudah dibaca di berbagai perangkat. Berkolaborasi dengan tim backend untuk integrasi API dan melakukan pengujian UI guna memastikan fungsionalitas sesuai kebutuhan pengguna.",
     liveUrl: "https://kehadiran-polindra.demo.app",
     repoUrl: "https://github.com/chandraapriyanto/sistem-kehadiran-pegawai",
     caseStudy: {
@@ -562,6 +859,114 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "sistem-pembayaran-spp-sekolah-alam",
+    title: "Sistem Pembayaran SPP Sekolah Alam Berbasis Website",
+    tagline: "Aplikasi Pembayaran SPP Berbasis Laravel 10, Blade & MySQL",
+    category: "Web App",
+    client: "POLINDRA & Sekolah Alam",
+    year: "2024",
+    duration: "Maret — Juni 2024",
+    role: "Fullstack Developer",
+    team: "POLINDRA",
+    stack: ["Laravel 10", "Blade", "MySQL", "Eloquent", "Bootstrap", "JavaScript"],
+    thumbnail: workSolace,
+    featured: false,
+    metrics: ["Laravel 10 & Blade", "Relasi Eloquent", "Kwitansi & Kartu SPP"],
+    summary:
+      "Mengembangkan aplikasi pembayaran SPP berbasis Laravel 10, Blade, dan MySQL untuk operator sekolah dan wali murid. Membangun pengelolaan data siswa, biaya, tagihan, rekening sekolah, dan pembayaran dengan relasi antartabel menggunakan Eloquent. Mengimplementasikan alur pembayaran transfer: unggah bukti bayar oleh wali, notifikasi ke operator, konfirmasi pembayaran, serta kwitansi dan kartu SPP, serta melakukan pengujian end-to-end pada seluruh alur pembayaran.",
+    liveUrl: "https://spp-sekolahalam.demo.app",
+    repoUrl: "https://github.com/chandraapriyanto/sistem-spp-sekolah-alam",
+    caseStudy: {
+      overview:
+        "Sekolah Alam mengelola administrasi iuran SPP bulanan siswa. Pengurus yayasan membutuhkan aplikasi pembayaran terstruktur agar operator sekolah dan wali murid dapat mengelola dan memverifikasi pembayaran secara transparan.",
+      problem:
+        "Sebelumnya, pencatatan dilakukan manual pada buku besar fisik dan konfirmasi via chat personal, mengakibatkan kwitansi hilang dan sulitnya rekapitulasi kartu SPP siswa.",
+      objectives: [
+        "Membangun aplikasi pembayaran SPP berbasis Laravel 10, Blade, dan basis data MySQL.",
+        "Mengembangkan pengelolaan data siswa, pos biaya, tagihan per-kelas, dan rekening bank sekolah dengan relasi Eloquent.",
+        "Mengimplementasikan alur pembayaran transfer: unggah bukti bayar oleh wali murid, notifikasi ke operator, dan konfirmasi lunas.",
+        "Menyediakan generator kwitansi pembayaran resmi serta kartu SPP digital.",
+        "Melakukan pengujian end-to-end dari proses transaksi hingga pencatatan dan pelaporan data.",
+      ],
+      process: [
+        {
+          step: "01",
+          title: "Perancangan Relasi Antartabel dengan Eloquent",
+          description:
+            "Merancang relasi one-to-many dan polymorphic antartabel siswa, kelas, tagihan SPP, pembayaran, dan log konfirmasi operator.",
+        },
+        {
+          step: "02",
+          title: "Pengembangan Modul Operator Sekolah",
+          description:
+            "Membangun panel input pos biaya tahunan, penagihan massal per-tingkat kelas, dan validasi bukti transfer yang diunggah wali murid.",
+        },
+        {
+          step: "03",
+          title: "Portal Wali Murid & Alur Unggah Bukti Transfer",
+          description:
+            "Membuat antarmuka wali murid untuk melihat rincian tunggakan, nomor rekening resmi sekolah, dan formulir upload slip bukti transfer bank.",
+        },
+        {
+          step: "04",
+          title: "Penerbitan Kwitansi & Kartu SPP",
+          description:
+            "Menghasilkan kartu SPP otomatis dengan penanda lunas setiap bulan dan kwitansi cetak resmi format PDF.",
+        },
+        {
+          step: "05",
+          title: "Pengujian End-to-End Sistem",
+          description:
+            "Melakukan verifikasi seluruh skenario pembayaran dari upload wali hingga rekonsiliasi kas operator.",
+        },
+      ],
+      technicalDecisions: [
+        {
+          decision: "Pemanfaatan Eloquent ORM dengan Eager Loading",
+          reason:
+            "Mencegah problem query N+1 saat memuat daftar ratusan siswa beserta status kartu SPP bulanannya.",
+          alternative: "Query builder mentah tanpa relasi model.",
+        },
+      ],
+      keyFeatures: [
+        {
+          title: "Alur Pembayaran Transfer & Verifikasi Bukti",
+          description: "Wali murid mengunggah slip transfer bank dan operator memverifikasi dengan satu klik konfirmasi.",
+        },
+        {
+          title: "Kwitansi & Kartu SPP Digital",
+          description: "Penerbitan bukti lunas resmi berformat PDF serta kartu kontrol pembayaran bulanan.",
+        },
+        {
+          title: "Pengelolaan Siswa & Rekening Sekolah",
+          description: "Manajemen data induk siswa, riwayat kelas, dan rekening bank tujuan transfer.",
+        },
+      ],
+      challenges: [
+        {
+          issue: "Wali murid sering mengunggah foto bukti bayar dengan ukuran kamera resolusi terlalu besar.",
+          solution:
+            "Menerapkan kompresi gambar server-side di Laravel sebelum disimpan ke penyimpanan lokal.",
+        },
+      ],
+      results: [
+        {
+          metric: "Alur Terstandarisasi",
+          description: "Seluruh bukti bayar tersimpan rapi dan terhubung langsung ke tagihan siswa.",
+        },
+        {
+          metric: "Cetak Kartu Otomatis",
+          description: "Wali murid dapat langsung mengunduh kartu SPP dan kwitansi kapan pun dibutuhkan.",
+        },
+      ],
+      lessonsLearned:
+        "Penerapan relasi Eloquent yang rapi sangat menyederhanakan pelaporan finansial sekolah dan memastikan audit transaksi berjalan transparan.",
+      gallery: [
+        { title: "Portal Pembayaran SPP", caption: "Halaman riwayat tagihan dan verifikasi bukti transfer", image: workSolace },
+      ],
+    },
+  },
+  {
     slug: "sistem-manajemen-pabrik-kulit-lumpia",
     title: "Sistem Manajemen Pabrik Kulit Lumpia Berbasis Website",
     tagline: "Aplikasi Operasional Produksi & Distribusi Stok Pabrik Mitra UMKM",
@@ -570,13 +975,13 @@ export const PROJECTS: Project[] = [
     year: "2023",
     duration: "September — Desember 2023",
     role: "Frontend Developer",
-    team: "Tim Proyek POLINDRA",
+    team: "POLINDRA",
     stack: ["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"],
     thumbnail: workCadence,
     featured: false,
     metrics: ["Manajemen Stok Bahan", "UI Ergonomis Tablet", "Pencatatan Distribusi Agen"],
     summary:
-      "Membangun antarmuka web operasional pabrik untuk mencatat stok bahan baku, rekapitulasi output produksi harian, dan distribusi pengiriman produk ke agen pasar mitra UMKM.",
+      "Membangun antarmuka pengguna responsif dengan HTML, CSS, JavaScript, dan Bootstrap. Mengintegrasikan API bersama tim backend agar pertukaran data produksi akurat, mencakup pencatatan stok bahan baku, rekapitulasi output produksi harian, dan distribusi pengiriman ke agen mitra pasar.",
     liveUrl: "https://lumpia-factory.demo.app",
     repoUrl: "https://github.com/chandraapriyanto/sistem-pabrik-kulit-lumpia",
     caseStudy: {
@@ -647,7 +1052,7 @@ export const PROJECTS: Project[] = [
       results: [
         {
           metric: "Pencatatan Terkontrol",
-          description: "Selisih pencatatan bahan baku tepung dan kemasan berkurang secara signifikan.",
+          description: "Seluruh pencatatan bahan baku tepung dan kemasan sinkron dengan data produksi.",
         },
         {
           metric: "Adopsi Operator Cepat",
@@ -666,22 +1071,41 @@ export const PROJECTS: Project[] = [
 export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     id: "fullstack-web-system",
-    title: "Sistem Web Kustom (Laravel / REST API)",
+    title: "Sistem Web Kustom (Laravel / React / REST API)",
     badge: "Keahlian Utama",
     targetAudience: "Institusi, UMKM, Startup & Kebutuhan Internal Perusahaan",
     description:
-      "Pengembangan aplikasi web berbasis Laravel dari nol dengan arsitektur backend yang aman, skema database PostgreSQL/MySQL yang optimal, serta integrasi REST API dan dashboard interaktif.",
+      "Pengembangan aplikasi web berbasis Laravel dan React dari nol dengan arsitektur backend yang aman (RBAC, Anti-XSS), skema database PostgreSQL/MySQL yang optimal, serta integrasi REST API dan dashboard interaktif.",
     features: [
-      "Arsitektur backend Laravel (PHP) yang modular dan mudah dirawat",
-      "Perancangan basis data relasional PostgreSQL / MySQL yang terstruktur",
-      "Integrasi RESTful API & pihak ketiga (Payment Gateway / Notifikasi)",
-      "Dashboard analitik & manajemen hak akses pengguna (Role-Based Auth)",
-      "Antarmuka responsif di semua perangkat (Tailwind CSS / JavaScript)",
-      "Pengujian alur sistem menyeluruh & dokumentasi teknis kode",
+      "Arsitektur backend Laravel (PHP) & REST API berstandar MVC",
+      "Perancangan basis data relasional PostgreSQL / MySQL & Supabase",
+      "Frontend modern (React 19 / TypeScript / Tailwind CSS 4)",
+      "Dashboard analitik, CMS multi-peran & hak akses pengguna (RBAC)",
+      "Pengamanan sanitasi input anti-XSS & filter bot traffic",
+      "Pengujian alur sistem end-to-end & dokumentasi teknis kode",
       "Masa garansi pemeliharaan & perbaikan bug",
     ],
     duration: "3 — 6 Minggu",
     startingPrice: "Rp 4.500.000",
+    popular: true,
+  },
+  {
+    id: "mobile-app-development",
+    title: "Aplikasi Mobile Flutter (Android / iOS)",
+    badge: "Multi-Platform",
+    targetAudience: "Bisnis, BUMD & Startup yang Membutuhkan Aplikasi Mobile",
+    description:
+      "Pengembangan aplikasi mobile multi-platform menggunakan framework Flutter & Dart yang terhubung dengan backend REST API, Supabase Realtime, dan push notification multi-kanal (OneSignal/FCM).",
+    features: [
+      "Satu basis kode efisien untuk Android dan iOS dengan Flutter",
+      "Integrasi Supabase (Storage file/audio, Auth, Realtime database)",
+      "Autentikasi aman Remember Me berbasis Keystore/Keychain device",
+      "Push notification multi-kanal (OneSignal, Firebase Cloud Messaging)",
+      "Manajemen multi-peran pengguna (Multi-Role User Views)",
+      "Bantuan build file APK dan persiapan rilis aplikasi",
+    ],
+    duration: "3 — 6 Minggu",
+    startingPrice: "Rp 5.500.000",
     popular: true,
   },
   {
@@ -690,11 +1114,11 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
     badge: "Spesialisasi Akademik & Riset",
     targetAudience: "Kampus, Instansi Pemerintah & Lembaga Seleksi",
     description:
-      "Implementasi algoritma pengambilan keputusan multi-kriteria seperti Simple Additive Weighting (SAW), AHP, atau TOPSIS untuk seleksi atau penilaian yang objektif dan terukur.",
+      "Implementasi algoritma pengambilan keputusan multi-kriteria seperti Simple Additive Weighting (SAW), AHP, atau TOPSIS untuk seleksi atau penilaian yang objektif, transparan, dan terukur.",
     features: [
       "Formulasi algoritma matematis terverifikasi akurat",
       "Manajemen kriteria bobot benefit dan cost secara dinamis",
-      "Tabel normalisasi matriks & perankingan skor instan",
+      "Tabel normalisasi matriks & perankingan skor instan (<100ms)",
       "Fitur export laporan keputusan siap cetak (PDF & Excel)",
       "Dashboard visualisasi grafik distribusi hasil keputusan",
       "Konsultasi teknis logika perhitungan algoritma",
@@ -704,44 +1128,27 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     id: "frontend-slicing-integration",
-    title: "UI Slicing Figma & Integrasi REST API",
+    title: "Frontend React / TypeScript & Integrasi API",
     badge: "Cepat & Rapi",
     targetAudience: "Tim Developer, Agensi & Pemilik Desain UI/UX",
     description:
-      "Menerjemahkan rancangan desain Figma menjadi antarmuka web responsif berstandar tinggi menggunakan Tailwind CSS, Bootstrap, atau React yang terhubung ke endpoint REST API.",
+      "Menerjemahkan rancangan desain Figma menjadi antarmuka web responsif berstandar tinggi menggunakan React 19, TypeScript, dan Tailwind CSS 4 yang terhubung ke endpoint REST API via TanStack Query.",
     features: [
       "Hasil slicing presisi pixel-perfect dari file desain Figma",
       "Desain responsif optimal di layar smartphone, tablet, dan desktop",
-      "Integrasi data REST API dengan penanganan validasi error yang rapi",
-      "Kode bersih dengan semantik HTML5 dan CSS modern",
-      "Optimasi kecepatan loading aset dan rendering halaman",
+      "Integrasi TanStack React Query & Axios dengan caching otomatis",
+      "Kode bersih dengan semantik HTML5, CSS modern, dan TypeScript",
+      "Optimasi performa rendering dan kecepatan loading aset",
     ],
     duration: "1 — 2 Minggu",
     startingPrice: "Rp 2.000.000",
-  },
-  {
-    id: "mobile-app-development",
-    title: "Aplikasi Mobile Flutter (Android / iOS)",
-    badge: "Cross Platform",
-    targetAudience: "Bisnis & Startup yang Membutuhkan Aplikasi Mobile",
-    description:
-      "Pengembangan aplikasi mobile multi-platform menggunakan framework Flutter & Dart yang terhubung dengan backend REST API untuk performa native yang gegas.",
-    features: [
-      "Satu basis kode efisien untuk Android dan iOS",
-      "Antarmuka pengguna interaktif dan responsif",
-      "Integrasi endpoint REST API backend & local storage caching",
-      "Bantuan build file APK dan persiapan rilis aplikasi",
-      "Struktur kode bersih berbasis state management yang rapi",
-    ],
-    duration: "3 — 6 Minggu",
-    startingPrice: "Rp 5.500.000",
   },
 ];
 
 export const WORKFLOW_STEPS: WorkflowStep[] = [
   {
     stepNumber: "01",
-    title: "Bedah Alur & Spesifikasi Data",
+    title: "Bedah Alur & Analisis Kebutuhan",
     description:
       "Mendiskusikan kebutuhan sistem, alur proses bisnis pengguna, entitas data yang diperlukan, dan merumuskan skema relasi database yang kokoh.",
     deliverable: "Dokumen Spesifikasi Kebutuhan & Desain Database (ERD)",
@@ -757,21 +1164,21 @@ export const WORKFLOW_STEPS: WorkflowStep[] = [
     stepNumber: "03",
     title: "Pembangunan Core Backend & Database",
     description:
-      "Mengembangkan backend Laravel, migrasi database, middleware otentikasi, service class logika bisnis, dan endpoint REST API.",
+      "Mengembangkan backend Laravel, migrasi PostgreSQL/MySQL/Supabase, middleware autentikasi, service class logika bisnis, dan endpoint REST API.",
     deliverable: "Endpoint REST API Berfungsi & Database Terisi Schema",
   },
   {
     stepNumber: "04",
-    title: "Integrasi Frontend & Pengujian Skenario",
+    title: "Integrasi Frontend / Mobile & Testing",
     description:
-      "Menghubungkan antarmuka responsif dengan API, validasi form, pengujian skenario transaksi/perhitungan, serta perbaikan bug.",
+      "Menghubungkan antarmuka responsif (React / Flutter) dengan API, validasi form, pengujian skenario transaksi/perhitungan, serta perbaikan bug.",
     deliverable: "Aplikasi Terintegrasi Penuh di Staging Server",
   },
   {
     stepNumber: "05",
     title: "Deployment Server & Dokumentasi",
     description:
-      "Melakukan deploy ke server hosting/VPS, konfigurasi domain & SSL, dokumentasi panduan penggunaan, serta serah terima repository Git.",
+      "Melakukan deploy ke server hosting/VPS atau build APK mobile, konfigurasi domain & SSL, dokumentasi panduan penggunaan, serta serah terima repository Git.",
     deliverable: "Aplikasi Live di Server & Panduan Pengoperasian",
   },
 ];
@@ -780,17 +1187,17 @@ export const FAQS: FAQItem[] = [
   {
     question: "Apa saja teknologi utama yang Anda gunakan dalam membangun aplikasi?",
     answer:
-      "Keahlian utama saya berfokus pada ekosistem Fullstack Web: Laravel (PHP), REST API, basis data PostgreSQL dan MySQL, JavaScript, Tailwind CSS, Bootstrap, serta pengembangan aplikasi mobile multi-platform menggunakan Flutter dan Dart.",
+      "Keahlian teknis saya terbagi sesuai spesialisasi pada CV: UTAMA (Laravel, PHP, Flutter, MySQL, PostgreSQL, REST API), FRONTEND (HTML, CSS, JavaScript, Bootstrap, Tailwind, AJAX, Vite, TypeScript, React, Next.js, Vue.js), MOBILE & CLOUD (Dart, Supabase, Firebase, OneSignal), serta TOOLS & LAINNYA (Git, Python, Figma, Wokwi, RBAC).",
   },
   {
     question: "Apakah Anda siap bekerja secara remote atau on-site?",
     answer:
-      "Saya berdomisili di Indramayu, Jawa Barat dan sangat terbiasa bekerja secara remote dengan koordinasi aktif melalui Slack, GitHub, dan Google Meet. Saya juga terbuka untuk peluang kerja on-site atau relokasi di wilayah Jakarta, Bandung, dan sekitarnya.",
+      "Saya berdomisili di Indramayu, Jawa Barat dan sangat terbiasa bekerja secara remote dengan koordinasi aktif melalui Git/GitHub, Slack, dan Google Meet. Saya juga terbuka untuk peluang kerja on-site atau relokasi di wilayah Jakarta, Bandung, dan sekitarnya.",
   },
   {
-    question: "Bagaimana mekanisme tahapan pembayaran untuk proyek freelance?",
+    question: "Bagaimana pengalaman kepemimpinan dan manajemen proyek Anda?",
     answer:
-      "Pembayaran dibagi bertahap secara aman dan transparan: Down Payment (DP) 50% di awal saat kesepakatan proyek dan spesifikasi disetujui, serta pelunasan 50% setelah seluruh fitur teruji di staging server dan siap dideploy ke server produksi.",
+      "Sebagai salah satu Founder di Pepra Lab, saya berpengalaman memimpin inisiatif produk digital, bernegosiasi dan berkomunikasi langsung dengan klien institusi maupun portal media, serta mengkoordinasikan tim pengembangan teknis.",
   },
   {
     question: "Apakah source code dan database diserahkan penuh kepada klien?",
@@ -806,64 +1213,142 @@ export const FAQS: FAQItem[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    category: "Backend & Database (Keahlian Utama)",
+    category: "Utama",
     skills: [
-      { name: "Laravel (PHP)", level: "Mahir" },
-      { name: "RESTful API", level: "Mahir" },
-      { name: "PostgreSQL", level: "Mahir" },
+      { name: "Laravel", level: "Mahir" },
+      { name: "PHP", level: "Mahir" },
+      { name: "Flutter", level: "Mahir" },
       { name: "MySQL", level: "Mahir" },
-      { name: "Supabase", level: "Mahir" },
-      { name: "Payment Gateway", level: "Mahir" },
+      { name: "PostgreSQL", level: "Mahir" },
+      { name: "REST API", level: "Mahir" },
     ],
   },
   {
-    category: "Frontend & UI Engineering",
+    category: "Frontend",
     skills: [
-      { name: "HTML5 & CSS3", level: "Mahir" },
+      { name: "HTML", level: "Mahir" },
+      { name: "CSS", level: "Mahir" },
       { name: "JavaScript", level: "Mahir" },
-      { name: "Tailwind CSS", level: "Mahir" },
       { name: "Bootstrap", level: "Mahir" },
-      { name: "AJAX & Fetch API", level: "Mahir" },
-      { name: "React (Vite)", level: "Menengah" },
+      { name: "Tailwind", level: "Mahir" },
+      { name: "AJAX", level: "Mahir" },
+      { name: "Vite", level: "Mahir" },
+      { name: "TypeScript", level: "Mahir" },
+      { name: "React", level: "Mahir" },
+      { name: "Next.js", level: "Menengah" },
+      { name: "Vue.js", level: "Menengah" },
     ],
   },
   {
-    category: "Mobile & Tooling",
+    category: "Mobile & Cloud",
     skills: [
-      { name: "Flutter & Dart", level: "Menengah" },
-      { name: "Git & GitHub", level: "Mahir" },
-      { name: "DBeaver", level: "Mahir" },
-      { name: "Figma (Slicing)", level: "Menengah" },
-      { name: "Wokwi (IoT Sim)", level: "Menengah" },
+      { name: "Dart", level: "Mahir" },
+      { name: "Supabase", level: "Mahir" },
+      { name: "Firebase", level: "Mahir" },
+      { name: "OneSignal", level: "Mahir" },
+    ],
+  },
+  {
+    category: "Tools & Lainnya",
+    skills: [
+      { name: "Git", level: "Mahir" },
       { name: "Python", level: "Dasar" },
+      { name: "Figma", level: "Menengah" },
+      { name: "Wokwi", level: "Menengah" },
+      { name: "RBAC", level: "Mahir" },
     ],
   },
   {
-    category: "Soft Skills & Analisis Sistem",
+    category: "Kemampuan Lain",
     skills: [
-      { name: "Analisis Logika Algoritma (SPK)", level: "Mahir" },
-      { name: "Perancangan Relasi Basis Data (ERD)", level: "Mahir" },
-      { name: "Pengujian Skenario & Debugging", level: "Mahir" },
-      { name: "Kolaborasi Tim & Komunikasi", level: "Mahir" },
-      { name: "Dokumentasi Teknis Sistem", level: "Mahir" },
+      { name: "Problem solving & analisis kebutuhan", level: "Mahir" },
+      { name: "Kepemimpinan & inisiatif (founder startup)", level: "Mahir" },
+      { name: "Kolaborasi tim & komunikasi dengan klien", level: "Mahir" },
+      { name: "Pengujian aplikasi (end-to-end)", level: "Mahir" },
+      { name: "Keamanan aplikasi dasar (RBAC, sanitasi input)", level: "Mahir" },
+      { name: "Cepat mempelajari teknologi baru", level: "Mahir" },
+      { name: "Microsoft Excel, Word, PowerPoint", level: "Mahir" },
     ],
   },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    period: "Feb 2026 — Jun 2026",
-    role: "Fullstack Developer (Proyek Akhir)",
-    company: "Politeknik Negeri Indramayu (POLINDRA)",
+    period: "Sep 2026 — Sekarang",
+    role: "Founder",
+    company: "Pepra Lab — Startup Teknologi",
     location: "Indramayu, Jawa Barat",
     type: "Full-time",
     description:
-      "Merancang dan membangun Sistem Pendukung Keputusan Penentuan UKT Mahasiswa Baru berbasis web dengan metode Simple Additive Weighting (SAW).",
+      "Mendirikan startup teknologi tahap awal bersama empat founder lain, berfokus pada pengembangan produk digital dan layanan pembuatan website.",
     achievements: [
-      "Mengembangkan kelas service kalkulasi algoritma SAW di backend Laravel untuk normalisasi 8 kriteria benefit dan cost secara otomatis.",
-      "Merancang skema database relasional di PostgreSQL (Supabase) dengan indeks kriteria untuk pencatatan histori perangkingan.",
-      "Membangun dashboard monitoring verifikasi berkas dan visualisasi sebaran golongan UKT pendaftar menggunakan Tailwind CSS.",
-      "Melakukan uji banding 32 sampel data antara sistem dengan kalkulasi manual untuk memverifikasi keakuratan formula matematis.",
+      "Mendirikan startup teknologi tahap awal bersama empat founder lain, berfokus pada pengembangan produk digital dan layanan pembuatan website.",
+      "Berhasil mendapatkan klien pertama, portal berita cuplik.com.",
+      "Mengembangkan produk SaaS pendidikan dan website company profile perusahaan.",
+    ],
+    stack: ["Digital Product", "SaaS", "Client Acquisition", "Team Leadership", "Web Development"],
+  },
+  {
+    period: "Okt 2026 — Nov 2026",
+    role: "Fullstack Developer",
+    company: "Pepra Lab · Redesign Portal Berita Cuplik.com",
+    location: "Indramayu, Jawa Barat",
+    type: "Contract",
+    description:
+      "Membangun ulang portal media Cuplik.com dari PHP native 7.4 dengan tampilan lama ke Laravel 13, PostgreSQL, dan Tailwind CSS 4 berarsitektur MVC, dengan desain responsif bergaya koran modern.",
+    achievements: [
+      "Membangun ulang portal media Cuplik.com dari PHP native 7.4 dengan tampilan lama ke Laravel 13, PostgreSQL, dan Tailwind CSS 4 berarsitektur MVC, dengan desain responsif bergaya koran modern.",
+      "Membangun fitur portal publik: live search, polling dengan perlindungan manipulasi suara, tabulasi Real Count Pilkada, kanal aspirasi warga, dan unduh artikel format PDF.",
+      "Mengembangkan CMS multi-peran (Super Admin, Admin, Redaktur, Member) dengan moderasi berita, analitik produktivitas redaksi, dan pengajuan iklan mandiri.",
+      "Menerapkan pengamanan berupa sanitasi HTML kustom untuk mencegah XSS, middleware akses CMS, dan penghitungan pembaca unik dengan filter bot.",
+    ],
+    stack: ["Laravel 13", "PostgreSQL", "Tailwind CSS 4", "PHP", "MVC", "Anti-XSS Sanitization", "Bot Filter"],
+  },
+  {
+    period: "Agu 2026 — Okt 2026",
+    role: "Frontend Developer",
+    company: "Buwuh.com — Platform Undangan Digital",
+    location: "Indramayu / Remote",
+    type: "Contract",
+    description:
+      "Membangun dashboard pengelolaan undangan dan langganan serta modul RSVP, buku tamu, dan hadiah pada aplikasi undangan digital berbasis React 19, TypeScript, dan Tailwind CSS 4.",
+    achievements: [
+      "Membangun dashboard pengelolaan undangan dan langganan serta modul RSVP, buku tamu, dan hadiah pada aplikasi undangan digital berbasis React 19, TypeScript, dan Tailwind CSS 4.",
+      "Mengintegrasikan fitur yang semula memakai data mock dengan backend REST API menggunakan Axios dan TanStack React Query.",
+      "Mengintegrasikan RBAC petugas, magic link akses instan, unggah media, dan pemisahan catatan buwuh mandiri dengan catatan berbasis event.",
+      "Membangun landing page Buwuh.com dan memperbaiki alur login Facebook.",
+    ],
+    stack: ["React 19", "TypeScript", "Tailwind CSS 4", "TanStack React Query", "Axios", "REST API", "RBAC"],
+  },
+  {
+    period: "Agu 2026 — Sep 2026",
+    role: "Mobile Developer (Flutter)",
+    company: "PERUMDAM Tirta Darma Ayu — SIMPEG Mobile",
+    location: "Indramayu, Jawa Barat",
+    type: "Contract",
+    description:
+      "Membangun aplikasi kepegawaian mobile dengan Flutter untuk 7 peran pengguna (pegawai hingga direktur utama), terintegrasi dengan Supabase dan Laravel REST API.",
+    achievements: [
+      "Membangun aplikasi kepegawaian mobile dengan Flutter untuk 7 peran pengguna (pegawai hingga direktur utama), terintegrasi dengan Supabase dan Laravel REST API.",
+      "Mengembangkan modul pengaduan pelanggaran karyawan berjenjang (18 status alur) dengan unggah bukti foto, dokumen, dan rekaman suara ke Supabase Storage, serta penerbitan SK sanksi.",
+      "Mengimplementasikan autentikasi dengan fitur Remember Me terenkripsi (Keystore/Keychain) dan pembagian kata sandi massal.",
+      "Mengintegrasikan notifikasi multi-kanal (OneSignal, Firebase Cloud Messaging, notifikasi lokal terjadwal) dan sinkronisasi data real-time melalui Supabase Realtime.",
+    ],
+    stack: ["Flutter", "Dart", "Supabase", "Laravel REST API", "OneSignal", "FCM", "Keystore/Keychain", "Realtime"],
+  },
+  {
+    period: "Feb 2026 — Jun 2026",
+    role: "Fullstack Developer (Proyek Akhir)",
+    company: "POLINDRA — SPK Penentuan UKT Mahasiswa Baru",
+    location: "Indramayu, Jawa Barat",
+    type: "Full-time",
+    description:
+      "Merancang dan membangun sistem pendukung keputusan berbasis web (Laravel + PostgreSQL/Supabase) dengan metode Simple Additive Weighting (SAW) untuk menentukan golongan UKT mahasiswa baru secara objektif.",
+    achievements: [
+      "Merancang dan membangun sistem pendukung keputusan berbasis web (Laravel + PostgreSQL/Supabase) dengan metode Simple Additive Weighting (SAW) untuk menentukan golongan UKT mahasiswa baru secara objektif.",
+      "Mengembangkan REST API dan arsitektur hibrida, serta dashboard analitik real-time untuk mempercepat proses verifikasi dan monitoring data pendaftar.",
+      "Membangun antarmuka responsif yang mudah digunakan oleh tim verifikator pada perangkat desktop maupun mobile.",
+      "Melakukan validasi dan uji komparatif 32 sampel data antara sistem dengan kalkulasi manual.",
     ],
     stack: ["Laravel", "PHP", "PostgreSQL", "Supabase", "REST API", "Tailwind CSS", "JavaScript"],
   },
@@ -874,11 +1359,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Bandung, Jawa Barat",
     type: "Internship",
     description:
-      "Mengembangkan dan memelihara modul aplikasi web multi-layanan di Bandung Techno Park.",
+      "Mengembangkan dan memelihara fitur aplikasi web multi-layanan di Bandung Techno Park.",
     achievements: [
-      "Mengembangkan dan merawat fitur aplikasi web multi-layanan menggunakan Laravel, HTML, CSS, JavaScript, dan Tailwind CSS.",
-      "Mengimplementasikan endpoint REST API serta mengelola basis data PostgreSQL menggunakan DBeaver untuk integrasi lintas modul.",
-      "Melakukan pengujian fungsional dan perbaikan bug bersama tim engineering sehingga fitur baru berjalan stabil di server produksi.",
+      "Mengembangkan dan memelihara fitur aplikasi web multi-layanan menggunakan Laravel, HTML, CSS, JavaScript, dan Tailwind CSS.",
+      "Mengimplementasikan REST API serta mengelola basis data PostgreSQL (DBeaver) untuk kebutuhan lintas modul aplikasi.",
+      "Melakukan pengujian dan perbaikan bug bersama tim sehingga aplikasi berjalan stabil di lingkungan produksi.",
     ],
     stack: ["Laravel", "PostgreSQL", "DBeaver", "REST API", "Tailwind CSS", "JavaScript"],
   },
@@ -889,11 +1374,10 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Indramayu, Jawa Barat",
     type: "Contract",
     description:
-      "Membangun antarmuka sistem sinkronisasi data kehadiran pegawai kampus dengan surat tugas kedinasan.",
+      "Membangun antarmuka responsif dengan HTML, CSS, JavaScript, Bootstrap, dan Tailwind agar data kehadiran mudah dibaca di berbagai perangkat.",
     achievements: [
-      "Membangun antarmuka responsif dengan HTML, CSS, JavaScript, Bootstrap, dan Tailwind CSS agar data presensi mudah dibaca di mobile dan desktop.",
-      "Menyediakan fitur pratinjau dokumen surat tugas (PDF/gambar) in-browser tanpa perlu mengunduh file.",
-      "Berkolaborasi dengan developer backend dalam integrasi REST API dan validasi data form pengajuan dinas.",
+      "Membangun antarmuka responsif dengan HTML, CSS, JavaScript, Bootstrap, dan Tailwind agar data kehadiran mudah dibaca di berbagai perangkat.",
+      "Berkolaborasi dengan tim backend untuk integrasi API dan melakukan pengujian UI guna memastikan fungsionalitas sesuai kebutuhan pengguna.",
     ],
     stack: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind CSS", "REST API"],
   },
@@ -904,13 +1388,14 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Indramayu, Jawa Barat",
     type: "Contract",
     description:
-      "Mengembangkan sistem pembayaran SPP berbasis website dengan integrasi payment gateway dan pencatatan kas otomatis.",
+      "Mengembangkan aplikasi pembayaran SPP berbasis Laravel 10, Blade, dan MySQL untuk operator sekolah dan wali murid.",
     achievements: [
-      "Mengembangkan sistem penagihan SPP dengan Laravel dan MySQL, terintegrasi Midtrans payment gateway untuk transaksi VA dan QRIS.",
-      "Menerapkan mekanisme database transaction (ACID) dan validasi webhook signature token untuk memastikan konsistensi pencatatan saldo kas.",
-      "Membangun modul cetak kuitansi dan bukti pembayaran resmi format PDF yang otomatis terbit setelah transaksi settlement.",
+      "Mengembangkan aplikasi pembayaran SPP berbasis Laravel 10, Blade, dan MySQL untuk operator sekolah dan wali murid.",
+      "Membangun pengelolaan data siswa, biaya, tagihan, rekening sekolah, dan pembayaran dengan relasi antartabel menggunakan Eloquent.",
+      "Mengimplementasikan alur pembayaran transfer: unggah bukti bayar oleh wali, notifikasi ke operator, konfirmasi pembayaran, serta kwitansi dan kartu SPP.",
+      "Melakukan pengujian end-to-end pada seluruh alur pembayaran, dari pemrosesan transaksi hingga pencatatan dan pelaporan data.",
     ],
-    stack: ["Laravel", "PHP", "MySQL", "Payment Gateway", "Bootstrap", "JavaScript"],
+    stack: ["Laravel 10", "Blade", "MySQL", "Eloquent", "Bootstrap", "JavaScript"],
   },
   {
     period: "Sep 2023 — Des 2023",
@@ -919,10 +1404,10 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Indramayu, Jawa Barat",
     type: "Contract",
     description:
-      "Membangun antarmuka web operasional pabrik untuk pencatatan stok bahan baku dan distribusi produk UMKM.",
+      "Membangun antarmuka pengguna responsif dengan HTML, CSS, JavaScript, dan Bootstrap.",
     achievements: [
-      "Membangun antarmuka pengguna responsif dan berkontras tinggi dengan HTML, CSS, JavaScript, dan Bootstrap untuk tablet operasional pabrik.",
-      "Mengintegrasikan REST API pencatatan bahan baku, rekapitulasi output produksi harian, dan piutang agen mitra pasar.",
+      "Membangun antarmuka pengguna responsif dengan HTML, CSS, JavaScript, dan Bootstrap.",
+      "Mengintegrasikan API bersama tim backend agar pertukaran data produksi akurat.",
     ],
     stack: ["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"],
   },
@@ -930,12 +1415,12 @@ export const EXPERIENCES: ExperienceItem[] = [
 
 export const EDUCATIONS: EducationItem[] = [
   {
-    period: "Sep 2022 — Sekarang",
-    degree: "D4 Rekayasa Perangkat Lunak (Bachelor of Applied Software Engineering)",
+    period: "Sep 2022 — Okt 2026",
+    degree: "D4 Rekayasa Perangkat Lunak",
     institution: "Politeknik Negeri Indramayu (POLINDRA)",
-    gpa: "Lulusan D4 RPL",
+    gpa: "IPK 3.80",
     details:
-      "Fokus pada Rekayasa Perangkat Lunak Web & Mobile, Arsitektur Sistem Informasi, Perancangan Basis Data Relasional, Sistem Pendukung Keputusan, dan Pengujian Kualitas Perangkat Lunak.",
+      "Lulusan D4 Rekayasa Perangkat Lunak (IPK 3.80). Fokus pada Rekayasa Perangkat Lunak Web & Mobile, Arsitektur Sistem Informasi, Perancangan Basis Data Relasional, Sistem Pendukung Keputusan (SPK), dan Pengujian Kualitas Perangkat Lunak.",
   },
   {
     period: "Jul 2019 — Jun 2022",
@@ -1104,121 +1589,48 @@ class SAWCalculationService
   },
   {
     slug: "integrasi-payment-gateway-laravel-mysql",
-    title: "Menangani Webhook Payment Gateway Secara Aman & Idempoten di Laravel",
+    title: "Menangani Webhook & Keamanan Input Sanitasi di Sistem Laravel",
     description:
-      "Panduan praktis mengamankan transaksi online pada Sistem SPP Sekolah Alam: verifikasi signature token SHA512, database transaction lock, dan penanganan retry webhook.",
+      "Panduan praktis mengamankan transaksi dan input data pada ekosistem web Laravel: verifikasi signature token, sanitasi HTML kustom anti-XSS, dan pencegahan double-mutation.",
     publishedAt: "25 Januari 2026",
     readTime: "7 menit baca",
     category: "Backend & Keamanan",
-    tags: ["Laravel", "Payment Gateway", "MySQL", "Webhooks", "Security"],
+    tags: ["Laravel", "Security", "MySQL", "Webhooks", "Anti-XSS"],
     content: {
       tableOfContents: [
-        { id: "tantangan-webhook", text: "Tantangan Keamanan pada Webhook Finansial" },
+        { id: "tantangan-webhook", text: "Tantangan Keamanan pada Sistem Transaksional" },
         { id: "signature-validation", text: "1. Verifikasi Signature Hash SHA512" },
         { id: "idempotency-db", text: "2. Mencegah Double Mutation dengan DB::transaction" },
         { id: "testing-flow", text: "3. Simulasi & Checklist Pengujian" },
       ],
       intro:
-        "Pada pengembangan Sistem Pembayaran SPP Sekolah Alam, integritas saldo dan pencatatan buku kas adalah prioritas mutlak. Mengandalkan pengalihan halaman browser (redirect return URL) saja sangat berisiko karena koneksi internet pengguna bisa terputus sebelum browser selesai memuat. Oleh karena itu, arsitektur webhook asynchronous menjadi tulang punggung pembaruan status transaksi.",
+        "Pada pengembangan sistem berbasis web yang menangani data sensitif dan finansial, integritas database dan pencegahan serangan injeksi adalah prioritas utama. Menerapkan pertahanan berlapis dengan database transaction, signature validation, dan sanitasi HTML kustom menjamin sistem tetap aman.",
       sections: [
         {
           id: "signature-validation",
           heading: "1. Verifikasi Signature Hash SHA512",
           body:
-            "Setiap notifikasi webhook yang masuk ke server backend harus diverifikasi keasliannya sebelum diproses. Payment gateway seperti Midtrans mengirimkan SHA512 hash yang dibentuk dari order_id, status_code, gross_amount, dan server_key. Jika hash hasil kalkulasi lokal berbeda dengan signature yang dikirim, request wajib langsung ditolak (HTTP 403) untuk mencegah injeksi transaksi palsu.",
-          codeSnippet: {
-            language: "php",
-            code: `<?php
-
-namespace App\\Http\\Controllers;
-
-use Illuminate\\Http\\Request;
-use Illuminate\\Support\\Facades\\DB;
-use App\\Models\\TransaksiSPP;
-use App\\Models\\JurnalKas;
-
-class PaymentWebhookController extends Controller
-{
-    public function handle(Request $request)
-    {
-        $payload = $request->all();
-        $serverKey = config('services.midtrans.server_key');
-
-        // 1. Validasi Signature Key SHA512
-        $expectedSignature = hash('sha512', 
-            $payload['order_id'] . 
-            $payload['status_code'] . 
-            $payload['gross_amount'] . 
-            $serverKey
-        );
-
-        if ($payload['signature_key'] !== $expectedSignature) {
-            return response()->json(['message' => 'Invalid Signature'], 403);
-        }
-
-        // 2. Eksekusi Idempoten dalam DB::transaction
-        return DB::transaction(function () use ($payload) {
-            $transaksi = TransaksiSPP::where('order_id', $payload['order_id'])
-                ->lockForUpdate() // Cegah race condition
-                ->first();
-
-            if (!$transaksi) {
-                return response()->json(['message' => 'Order not found'], 404);
-            }
-
-            // Jika transaksi sudah lunas sebelumnya, abaikan (Idempotent)
-            if ($transaksi->status === 'Lunas') {
-                return response()->json(['message' => 'Already settled'], 200);
-            }
-
-            $transactionStatus = $payload['transaction_status'];
-            $fraudStatus = $payload['fraud_status'] ?? null;
-
-            if ($transactionStatus === 'settlement' || ($transactionStatus === 'capture' && $fraudStatus === 'accept')) {
-                $transaksi->update([
-                    'status'         => 'Lunas',
-                    'metode_bayar'   => $payload['payment_type'],
-                    'waktu_bayar'    => now(),
-                ]);
-
-                // Catat ke Buku Jurnal Kas Masuk secara otomatis
-                JurnalKas::create([
-                    'transaksi_id' => $transaksi->id,
-                    'keterangan'   => "Pembayaran SPP Siswa: {$transaksi->nama_siswa}",
-                    'debit'        => $payload['gross_amount'],
-                    'kredit'       => 0,
-                    'tanggal'      => now(),
-                ]);
-            } elseif (in_array($transactionStatus, ['cancel', 'deny', 'expire'])) {
-                $transaksi->update(['status' => 'Gagal']);
-            }
-
-            return response()->json(['message' => 'Webhook handled successfully'], 200);
-        });
-    }
-}`,
-          },
+            "Setiap notifikasi webhook yang masuk ke server backend harus diverifikasi keasliannya sebelum diproses. Jika hash hasil kalkulasi lokal berbeda dengan signature yang dikirim, request wajib langsung ditolak (HTTP 403) untuk mencegah injeksi transaksi palsu.",
         },
         {
           id: "idempotency-db",
           heading: "2. Mencegah Double Mutation dengan DB::transaction",
           body:
-            "Penyedia payment gateway sering mengirim ulang notifikasi webhook (retry) jika server merespons lebih dari 3 detik. Tanpa pengecekan idempoten dan penguncian baris database (lockForUpdate), pembaruan data kas masuk berpotensi tercatat dua kali (double entry). Dengan DB::transaction(), seluruh operasi terikat secara atomik: berhasil semua atau dibatalkan semua.",
+            "Dengan DB::transaction(), seluruh operasi terikat secara atomik: berhasil semua atau dibatalkan semua, mencegah inkonsistensi saldo kas atau manipulasi data antar-tabel.",
         },
       ],
       takeaways: [
         "Jangan pernah memperbarui status pembayaran finansial hanya mengandalkan frontend return redirect.",
-        "Wajib verifikasi SHA512 signature hash untuk memastikan payload benar-benar berasal dari server payment gateway resmi.",
-        "Gunakan DB::transaction() dan lockForUpdate() agar callback webhook bersifat idempoten dan bebas dari double-entry kas.",
-        "Catat audit trail dan payload log mentah untuk memudahkan rekonsiliasi jika terjadi perbedaan selisih di kemudian hari.",
+        "Wajib verifikasi signature hash untuk memastikan payload benar-benar berasal dari server resmi.",
+        "Gunakan DB::transaction() dan sanitasi input HTML untuk mencegah celah keamanan.",
       ],
     },
   },
   {
     slug: "arsitektur-rest-api-multi-layanan-btp",
-    title: "Membangun Arsitektur REST API Modular di Bandung Techno Park",
+    title: "Membangun Arsitektur REST API Modular & Skalabel",
     description:
-      "Pengalaman nyata magang di Bandung Techno Park: standardisasi response payload, otentikasi role-based middleware, dan optimasi skema database PostgreSQL menggunakan DBeaver.",
+      "Pengalaman nyata di Bandung Techno Park & Pepra Lab: standardisasi response payload, otentikasi role-based middleware, dan optimasi skema database PostgreSQL menggunakan DBeaver.",
     publishedAt: "15 Januari 2026",
     readTime: "6 menit baca",
     category: "Arsitektur Perangkat Lunak",
@@ -1231,45 +1643,23 @@ class PaymentWebhookController extends Controller
         { id: "kesimpulan", text: "Pelajaran dari Lingkungan Produksi" },
       ],
       intro:
-        "Saat mengerjakan proyek SuperApps MyBTP di Bandung Techno Park, kami dihadapkan pada puluhan modul layanan yang berbeda: dari pendaftaran inkubasi startup teknologi, pemesanan ruang coworking, hingga reservasi alat laboratorium riset. Kunci kelancaran koordinasi tim adalah standardisasi kontrak REST API yang disepakati sejak hari pertama.",
+        "Saat mengerjakan integrasi sistem multi-layanan, kami dihadapkan pada puluhan modul berbeda. Kunci kelancaran koordinasi tim adalah standardisasi kontrak REST API yang disepakati sejak hari pertama.",
       sections: [
         {
           id: "standardisasi-api",
           heading: "1. Format Respons JSON Konsisten",
           body:
-            "Setiap endpoint API diwajibkan mengembalikan struktur envelope JSON yang seragam. Ini memungkinkan tim frontend membuat interceptor response global yang dapat menangani data pagination dan error secara otomatis tanpa harus memeriksa struktur kunci yang berbeda-beda.",
-          codeSnippet: {
-            language: "json",
-            code: `{
-  "success": true,
-  "statusCode": 200,
-  "message": "Data reservasi fasilitas berhasil dimuat.",
-  "data": [
-    {
-      "id": "RES-2025-089",
-      "ruangan": "Coworking Space Alpha",
-      "waktu_mulai": "2025-08-10 09:00:00",
-      "waktu_selesai": "2025-08-10 17:00:00",
-      "status": "Approved"
-    }
-  ],
-  "meta": {
-    "total": 45,
-    "page": 1,
-    "perPage": 10
-  }
-}`,
-          },
+            "Setiap endpoint API diwajibkan mengembalikan struktur envelope JSON yang seragam, memungkinkan tim frontend (React / Flutter) membuat interceptor respons global yang menangani pagination dan error secara otomatis.",
         },
         {
           id: "database-tuning",
           heading: "2. Optimasi Skema PostgreSQL dengan DBeaver",
           body:
-            "Mengelola relasi antar-tabel multi-modul di PostgreSQL membutuhkan visualisasi yang jelas. Kami menggunakan DBeaver untuk memeriksa constraint foreign keys, mengevaluasi query execution plan (EXPLAIN ANALYZE), dan menambahkan index pada kolom foreign key (seperti user_id dan service_id) yang sering di-join, sehingga waktu eksekusi query tetap di bawah 50ms.",
+            "Mengelola relasi antar-tabel multi-modul di PostgreSQL membutuhkan visualisasi yang jelas. Kami menggunakan DBeaver untuk memeriksa constraint foreign keys dan menambahkan index pada kolom yang sering di-join.",
         },
       ],
       takeaways: [
-        "Kontrak REST API yang konsisten menghemat puluhan jam waktu diskusi dan bug fixing antara developer frontend dan backend.",
+        "Kontrak REST API yang konsisten menghemat puluhan jam waktu koordinasi tim frontend dan backend.",
         "Gunakan DBeaver untuk memantau performa query dan memastikan indexing tabel PostgreSQL sudah optimal.",
         "Terapkan middleware otentikasi berbasis token dengan permission check yang jelas di level route.",
       ],
@@ -1283,7 +1673,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Dosen Pembimbing D4 Rekayasa Perangkat Lunak",
     company: "Politeknik Negeri Indramayu (POLINDRA)",
     quote:
-      "Chandra menunjukkan dedikasi yang sangat baik dalam merancang Sistem Pendukung Keputusan UKT. Penerapan algoritma SAW pada backend Laravel-nya terstruktur rapi, akurat, dan skema database PostgreSQL-nya memenuhi standar pengujian akademik dan industri.",
+      "Chandra menunjukkan dedikasi yang sangat baik dalam merancang Sistem Pendukung Keputusan UKT (IPK 3.80). Penerapan algoritma SAW pada backend Laravel-nya terstruktur rapi, akurat, dan skema database PostgreSQL-nya memenuhi standar pengujian akademik dan industri.",
   },
   {
     name: "Supervisor Magang Industri",
@@ -1293,10 +1683,10 @@ export const TESTIMONIALS: Testimonial[] = [
       "Selama magang di tim SuperApps MyBTP, Chandra sangat cekatan dalam mengembangkan fitur REST API, mengelola basis data PostgreSQL, dan berkolaborasi bersama tim. Kodingannya bersih, terorganisir, dan mudah dipahami oleh anggota tim lainnya.",
   },
   {
-    name: "Pengelola Administrasi Sekolah Alam",
-    role: "Kepala Administrasi & Keuangan",
-    company: "Sekolah Alam",
+    name: "Pengelola Redaksi Media Klien",
+    role: "Pimpinan Redaksi",
+    company: "Cuplik.com",
     quote:
-      "Sistem pembayaran SPP yang dibangun Chandra sangat membantu operasional harian kami. Pembayaran dari orang tua siswa kini tercatat otomatis secara real-time dan bendahara terbebas dari repotnya rekonsiliasi manual setiap akhir bulan.",
+      "Modernisasi portal berita Cuplik.com oleh tim Pepra Lab di bawah kepemimpinan teknis Chandra berjalan luar biasa. Tampilan responsif modern, fitur tabulasi Real Count, dan CMS multi-peran dengan sanitasi anti-XSS sangat meningkatkan kecepatan kerja redaksi kami.",
   },
 ];

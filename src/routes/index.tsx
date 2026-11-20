@@ -29,17 +29,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Chandra Apriyanto | Fullstack Web & Mobile Developer" },
+      { title: "Chandra Apriyanto | Fullstack Developer & Mobile Developer" },
       {
         name: "description",
         content:
-          "Portfolio Chandra Apriyanto — Fullstack Web & Mobile Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA. Spesialisasi backend Laravel, REST API, PostgreSQL, MySQL, dan Flutter.",
+          "Portfolio Chandra Apriyanto — Fullstack Developer & Mobile Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80) & Founder Pepra Lab. Berpengalaman 8 proyek web & mobile berbasis Laravel, Flutter, React, Vue.js, Supabase, dan PostgreSQL.",
       },
-      { property: "og:title", content: "Chandra Apriyanto | Fullstack Developer" },
+      { property: "og:title", content: "Chandra Apriyanto | Fullstack Developer & Mobile Developer" },
       {
         property: "og:description",
         content:
-          "Studi kasus sistem nyata: SPK SAW UKT POLINDRA, SuperApps MyBTP Bandung Techno Park, sistem pembayaran SPP, dan log teknis.",
+          "Studi kasus sistem nyata: Portal Berita Cuplik.com, Buwuh.com, SIMPEG Mobile PERUMDAM, SPK SAW UKT POLINDRA, SuperApps MyBTP, dan catatan teknis.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -50,16 +50,30 @@ export const Route = createFileRoute("/")({
 const TECH_LOGOS = [
   "Laravel",
   "PHP",
-  "PostgreSQL",
+  "Flutter",
   "MySQL",
+  "PostgreSQL",
   "REST API",
-  "Flutter & Dart",
-  "Tailwind CSS",
-  "Bootstrap",
+  "HTML",
+  "CSS",
   "JavaScript",
-  "Git & GitHub",
-  "Figma",
+  "Bootstrap",
+  "Tailwind",
+  "AJAX",
+  "Vite",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Vue.js",
+  "Dart",
+  "Supabase",
+  "Firebase",
+  "OneSignal",
+  "Git",
   "Python",
+  "Figma",
+  "Wokwi",
+  "RBAC",
 ];
 
 function IndexPage() {
@@ -84,7 +98,7 @@ function IndexPage() {
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="space-y-3">
                 <span className="font-mono text-xs uppercase tracking-wider text-muted-ink block">
-                  Fullstack Developer &bull; Indramayu / Bandung
+                  Fullstack Developer &bull; Mobile Developer &bull; Founder Pepra Lab
                 </span>
                 <h1 className="font-display font-extrabold tracking-tight text-4xl sm:text-6xl text-paper leading-[1.08]">
                   Membangun sistem web dan aplikasi mobile yang andal untuk kebutuhan nyata.
@@ -92,7 +106,7 @@ function IndexPage() {
               </div>
 
               <p className="text-base sm:text-lg text-muted-ink leading-relaxed max-w-2xl">
-                Lulusan D4 Rekayasa Perangkat Lunak POLINDRA dengan rekam jejak mengembangkan 5 sistem produksi sejak 2023. Berfokus pada arsitektur backend Laravel, REST API efisien, manajemen basis data PostgreSQL &amp; MySQL terstruktur, dan antarmuka pengguna yang responsif.
+                Lulusan D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80) dengan rekam jejak mengerjakan 8 proyek aplikasi web dan mobile sejak 2023, dari frontend developer hingga fullstack dan mobile developer. Terbiasa membangun sistem berbasis Laravel, Flutter, dan React dengan REST API, PostgreSQL/MySQL, dan Supabase, termasuk dashboard analitik real-time, CMS multi-peran, dan notifikasi multi-kanal.
               </p>
 
               {/* CTAs */}
@@ -205,7 +219,7 @@ function IndexPage() {
           <SectionHeading
             badge="Portofolio Proyek"
             title="Studi Kasus Sistem Nyata"
-            description="5 aplikasi web dan mobile yang dibangun untuk memecahkan kebutuhan operasional nyata: sistem SPK UKT, SuperApps BTP, pembayaran SPP, presensi, dan logistik produksi."
+            description="8 aplikasi web dan mobile yang dibangun untuk memecahkan kebutuhan operasional nyata: portal berita Cuplik.com, platform undangan Buwuh.com, SIMPEG Mobile PERUMDAM, sistem SPK UKT, SuperApps BTP, dan lainnya."
           />
           <Link
             to="/projects"
@@ -234,7 +248,7 @@ function IndexPage() {
               Ketelitian diagnosis mekanis dipadukan dengan rekayasa perangkat lunak modern.
             </h2>
             <p className="text-muted-ink text-sm sm:text-base leading-relaxed">
-              Latar belakang kejuruan otomotif melatih logika pemecahan masalah yang sistematis dan teliti hingga level komponen terkecil. Di bangku perkuliahan D4 RPL POLINDRA dan magang industri di Bandung Techno Park, prinsip ini saya terapkan untuk merancang arsitektur database, optimasi query SQL, dan struktur backend yang mudah dipelihara.
+              Latar belakang kejuruan otomotif melatih logika pemecahan masalah yang sistematis dan teliti hingga level komponen terkecil. Di bangku perkuliahan D4 RPL POLINDRA (IPK 3.80), magang industri di Bandung Techno Park, serta inisiatif mendirikan Pepra Lab, prinsip ini saya terapkan untuk merancang arsitektur database relasional, REST API yang aman, serta antarmuka responsif web dan mobile.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <Link
@@ -254,27 +268,27 @@ function IndexPage() {
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-3">
             <div className="p-4 rounded-xl border border-ink-raised bg-ink">
-              <div className="font-display font-semibold text-base text-paper">Backend &amp; API</div>
+              <div className="font-display font-semibold text-base text-paper">Utama</div>
               <p className="text-xs text-muted-ink mt-1.5 leading-relaxed">
-                Laravel, PHP, REST API, autentikasi role, dan payment gateway.
-              </p>
-            </div>
-            <div className="p-4 rounded-xl border border-ink-raised bg-ink">
-              <div className="font-display font-semibold text-base text-paper">Basis Data</div>
-              <p className="text-xs text-muted-ink mt-1.5 leading-relaxed">
-                PostgreSQL, MySQL, indexing query, dan integritas data relasional.
+                Laravel, PHP, Flutter, MySQL, PostgreSQL, dan REST API.
               </p>
             </div>
             <div className="p-4 rounded-xl border border-ink-raised bg-ink">
               <div className="font-display font-semibold text-base text-paper">Frontend</div>
               <p className="text-xs text-muted-ink mt-1.5 leading-relaxed">
-                Tailwind CSS, Bootstrap, JavaScript, Blade, dan layout responsif.
+                HTML, CSS, JS, Bootstrap, Tailwind, AJAX, Vite, TS, React, Next.js, dan Vue.js.
               </p>
             </div>
             <div className="p-4 rounded-xl border border-ink-raised bg-ink">
-              <div className="font-display font-semibold text-base text-paper">Mobile &amp; Tooling</div>
+              <div className="font-display font-semibold text-base text-paper">Mobile &amp; Cloud</div>
               <p className="text-xs text-muted-ink mt-1.5 leading-relaxed">
-                Flutter &amp; Dart, Git GitHub, Figma, dan Wokwi IoT.
+                Dart, Supabase, Firebase, dan OneSignal.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl border border-ink-raised bg-ink">
+              <div className="font-display font-semibold text-base text-paper">Tools &amp; Lainnya</div>
+              <p className="text-xs text-muted-ink mt-1.5 leading-relaxed">
+                Git, Python, Figma, Wokwi, dan RBAC.
               </p>
             </div>
           </div>

@@ -25,7 +25,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-ink text-sm leading-relaxed max-w-sm">
-              Fullstack Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA. Fokus pada backend Laravel, REST API, dan basis data PostgreSQL/MySQL yang andal.
+              Fullstack Developer &amp; Mobile Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80) &amp; Founder Pepra Lab. Terbiasa membangun sistem berbasis Laravel, Flutter, React, Vue.js, Supabase, dan PostgreSQL.
             </p>
             <div className="flex items-center gap-2 text-xs font-mono text-muted-ink mt-2">
               <span className="size-2 rounded-full bg-turf" />
@@ -117,7 +117,7 @@ export function Footer() {
             © {currentYear} Chandra Apriyanto — Hak Cipta Dilindungi.
           </div>
           <div className="flex items-center gap-1.5">
-            <span>D4 Rekayasa Perangkat Lunak POLINDRA</span>
+            <span>D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80)</span>
           </div>
         </div>
       </div>

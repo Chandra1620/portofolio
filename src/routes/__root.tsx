@@ -94,17 +94,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Chandra Apriyanto — Fullstack Web & Mobile Developer" },
+      { title: "Chandra Apriyanto — Fullstack Developer & Mobile Developer" },
       {
         name: "description",
         content:
-          "Chandra Apriyanto — Fullstack Web & Mobile Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA. Berpengalaman dalam Laravel, REST API, PostgreSQL, MySQL, dan Flutter.",
+          "Chandra Apriyanto — Fullstack Developer & Mobile Developer lulusan D4 Rekayasa Perangkat Lunak POLINDRA (IPK 3.80) & Founder Pepra Lab. Berpengalaman 8 proyek aplikasi web dan mobile (Laravel, Flutter, React, Vue.js, Supabase, PostgreSQL).",
       },
-      { property: "og:title", content: "Chandra Apriyanto — Fullstack Web & Mobile Developer" },
+      { property: "og:title", content: "Chandra Apriyanto — Fullstack Developer & Mobile Developer" },
       {
         property: "og:description",
         content:
-          "Website portofolio profesional Chandra Apriyanto. Studi kasus SPK SAW UKT, SuperApps MyBTP Bandung Techno Park, sistem pembayaran SPP, dan catatan teknis.",
+          "Website portofolio profesional Chandra Apriyanto. Studi kasus Cuplik.com, Buwuh.com, SIMPEG Mobile PERUMDAM, SPK SAW UKT POLINDRA, SuperApps MyBTP, dan catatan teknis.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

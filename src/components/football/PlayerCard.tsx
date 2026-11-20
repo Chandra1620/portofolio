@@ -4,11 +4,11 @@ import portrait from "@/assets/portrait.jpg";
 export function PlayerCard() {
   const TECHNICAL_PILLARS = [
     { label: "BACKEND", name: "Laravel (PHP)", icon: Server, exp: "Mahir" },
-    { label: "API", name: "RESTful API", icon: Code, exp: "Mahir" },
-    { label: "DATABASE", name: "PostgreSQL & MySQL", icon: Database, exp: "Mahir" },
-    { label: "MOBILE", name: "Flutter & Dart", icon: Smartphone, exp: "Menengah" },
-    { label: "FRONTEND", name: "Tailwind CSS", icon: Layers, exp: "Mahir" },
-    { label: "ALGORITMA", name: "SPK Metode SAW", icon: Cpu, exp: "Teruji" },
+    { label: "MOBILE", name: "Flutter & Dart", icon: Smartphone, exp: "Mahir" },
+    { label: "FRONTEND", name: "React & Vue.js", icon: Layers, exp: "Mahir" },
+    { label: "DATABASE", name: "PostgreSQL & Supabase", icon: Database, exp: "Mahir" },
+    { label: "API & RBAC", name: "REST API & RBAC", icon: Code, exp: "Mahir" },
+    { label: "NOTIFIKASI", name: "OneSignal & FCM", icon: Cpu, exp: "Mahir" },
   ];
 
   return (
@@ -34,14 +34,14 @@ export function PlayerCard() {
               FULLSTACK PLAYMAKER
             </div>
             <div className="font-mono text-[10px] text-paper/70 mt-0.5">
-              POLINDRA &bull; D4 RPL
+              POLINDRA &bull; D4 RPL (IPK 3.80)
             </div>
           </div>
 
           {/* National & Origin Badges */}
           <div className="flex flex-col items-end gap-1 font-mono text-[10px] text-paper/80">
             <span className="px-2.5 py-0.5 rounded bg-black/60 border border-gold/40 text-gold font-bold">
-              ID // INDONESIA
+              PEPRA LAB // FOUNDER
             </span>
             <span className="px-2.5 py-0.5 rounded bg-black/60 border border-paper/15 text-paper/90">
               INDRAMAYU, JABAR
@@ -60,7 +60,7 @@ export function PlayerCard() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
             <div className="absolute bottom-2 left-2 right-2 text-center">
               <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded bg-ink/80 text-emerald-300 border border-emerald-500/30">
-                5 Proyek Produksi
+                8 Proyek Produksi
               </span>
             </div>
           </div>
@@ -72,7 +72,7 @@ export function PlayerCard() {
             CHANDRA APRIYANTO
           </h3>
           <p className="font-mono text-xs text-gold font-semibold tracking-wider mt-0.5">
-            Fullstack Web &amp; Mobile Developer
+            Fullstack Developer &amp; Mobile Developer
           </p>
         </div>
 
@@ -104,11 +104,11 @@ export function PlayerCard() {
         <div className="mt-4 pt-3 border-t border-paper/10 flex items-center justify-between font-mono text-[11px] text-paper/80">
           <span className="flex items-center gap-1.5 text-gold font-semibold">
             <Award className="size-3.5" />
-            <span>Lulusan D4 RPL Polindra</span>
+            <span>Lulusan D4 RPL Polindra (IPK 3.80)</span>
           </span>
           <span className="flex items-center gap-1.5 text-emerald-400">
             <ShieldCheck className="size-3.5" />
-            <span>Siap Kerja &amp; Proyek</span>
+            <span>Founder Pepra Lab</span>
           </span>
         </div>
       </div>

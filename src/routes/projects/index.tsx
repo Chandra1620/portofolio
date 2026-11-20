@@ -12,13 +12,13 @@ export const Route = createFileRoute("/projects/")({
       {
         name: "description",
         content:
-          "Koleksi studi kasus proyek nyata: Sistem SPK SAW UKT POLINDRA, SuperApps MyBTP Bandung Techno Park, Sistem SPP Sekolah Alam, Kehadiran Pegawai, dan Manajemen Pabrik.",
+          "Koleksi 8 studi kasus proyek nyata: Portal Berita Cuplik.com, Buwuh.com, SIMPEG Mobile PERUMDAM, Sistem SPK SAW UKT POLINDRA, SuperApps MyBTP Bandung Techno Park, dan lainnya.",
       },
       { property: "og:title", content: "Daftar Proyek | Chandra Apriyanto" },
       {
         property: "og:description",
         content:
-          "Jelajahi arsitektur dan studi kasus 5 proyek sistem web dan mobile yang dibangun oleh Chandra Apriyanto.",
+          "Jelajahi arsitektur dan studi kasus 8 proyek aplikasi web dan mobile yang dibangun oleh Chandra Apriyanto.",
       },
     ],
   }),
@@ -27,9 +27,10 @@ export const Route = createFileRoute("/projects/")({
 
 const CATEGORIES = [
   "Semua",
+  "Web App",
+  "Mobile App",
   "SPK & Algoritma",
   "Magang Industri",
-  "Web App",
   "Frontend & UI",
 ] as const;
 
@@ -60,7 +61,7 @@ function ProjectsCatalogPage() {
         <SectionHeading
           badge="Portofolio Proyek"
           title="Studi Kasus &amp; Sistem Produksi"
-          description="Dokumentasi lengkap 5 sistem web dan mobile yang saya rancang dan kembangkan, mencakup arsitektur backend Laravel, perancangan database PostgreSQL/MySQL, integrasi REST API, hingga pengujian end-to-end."
+          description="Dokumentasi lengkap 8 sistem web dan mobile yang saya rancang dan kembangkan, mencakup arsitektur backend Laravel, aplikasi mobile Flutter, frontend React 19, perancangan database PostgreSQL/MySQL, integrasi REST API, hingga pengujian end-to-end."
         />
       </div>
 

@@ -12,44 +12,44 @@ interface PlayerSkill {
 }
 
 const FORMATION_PLAYERS: PlayerSkill[] = [
-  // Forwards (Frontend)
+  // Forwards (Frontend & Mobile Attack)
   {
     position: "LW",
-    name: "Tailwind CSS",
+    name: "Tailwind CSS 4",
     number: 11,
     category: "FWD",
     roleDesc: "Styling Utility Modern & Responsif",
-    experienceLevel: "Mahir (4+ Proyek)",
-    projectUsage: "SPK UKT POLINDRA & SuperApps MyBTP",
+    experienceLevel: "Mahir (Koran Modern & Dashboard)",
+    projectUsage: "Cuplik.com, Buwuh.com & SuperApps MyBTP",
   },
   {
     position: "ST",
-    name: "JavaScript",
+    name: "React 19 & TS",
     number: 9,
     category: "FWD",
-    roleDesc: "Logika Interaktif & DOM Manipulation",
-    experienceLevel: "Mahir (5 Proyek)",
-    projectUsage: "Seluruh 5 Proyek Web",
+    roleDesc: "Komponen Reaktif & TanStack Query",
+    experienceLevel: "Mahir (Modern React Ecosystem)",
+    projectUsage: "Buwuh.com Platform Undangan Digital",
   },
   {
     position: "RW",
-    name: "Bootstrap & AJAX",
+    name: "Flutter & Dart",
     number: 7,
     category: "FWD",
-    roleDesc: "Komponen UI Cepat & Asynchronous Request",
-    experienceLevel: "Mahir (3 Proyek)",
-    projectUsage: "Presensi Pegawai & SPP Sekolah Alam",
+    roleDesc: "Mobile Multi-Platform Android & iOS",
+    experienceLevel: "Mahir (Aplikasi Kepegawaian)",
+    projectUsage: "SIMPEG Mobile PERUMDAM Tirta Darma Ayu",
   },
 
   // Midfield (Backend & Logic)
   {
     position: "CAM",
-    name: "Laravel (PHP)",
+    name: "Laravel 13",
     number: 10,
     category: "MID",
     roleDesc: "Core Backend MVC & Business Logic",
     experienceLevel: "Mahir (Keahlian Utama)",
-    projectUsage: "SPK UKT, MyBTP, SPP Sekolah Alam",
+    projectUsage: "Cuplik.com, SPK UKT, SIMPEG & MyBTP",
   },
   {
     position: "CM",
@@ -58,77 +58,95 @@ const FORMATION_PLAYERS: PlayerSkill[] = [
     category: "MID",
     roleDesc: "Arsitektur Endpoint & Integrasi JSON",
     experienceLevel: "Mahir (Standar Industri)",
-    projectUsage: "MyBTP Application Center & SPK UKT",
+    projectUsage: "Seluruh 8 Proyek Web & Mobile",
   },
   {
     position: "CDM",
-    name: "Metode SAW (SPK)",
+    name: "Supabase Realtime",
     number: 6,
     category: "MID",
-    roleDesc: "Algoritma Normalisasi & Perankingan Keputusan",
-    experienceLevel: "Teruji 32 Kasus Uji",
-    projectUsage: "Proyek Akhir D4 RPL POLINDRA",
+    roleDesc: "Cloud Storage, Auth & Realtime Stream",
+    experienceLevel: "Mahir (Event-Driven Cloud)",
+    projectUsage: "SIMPEG Mobile & Buwuh.com",
   },
 
   // Defense (Databases & Verification)
   {
     position: "LB",
-    name: "Supabase / Cloud",
+    name: "PostgreSQL",
     number: 3,
     category: "DEF",
-    roleDesc: "Cloud Database & Auth Services",
-    experienceLevel: "Mahir (Implementasi Cloud)",
-    projectUsage: "SPK Penentuan UKT Mahasiswa",
+    roleDesc: "Relasi Data Kompleks & DBeaver Tooling",
+    experienceLevel: "Mahir (Standar Enterprise)",
+    projectUsage: "Cuplik.com, SPK UKT & Bandung Techno Park",
   },
   {
     position: "CB",
-    name: "PostgreSQL",
+    name: "MySQL & Eloquent",
     number: 4,
     category: "DEF",
-    roleDesc: "Relasi Data Kompleks & DBeaver Tooling",
-    experienceLevel: "Mahir (Magang Industri)",
-    projectUsage: "Bandung Techno Park & Supabase",
-  },
-  {
-    position: "CB",
-    name: "MySQL",
-    number: 5,
-    category: "DEF",
-    roleDesc: "Relasi Basis Data ACID & Transaction Wrapper",
-    experienceLevel: "Mahir (3 Proyek)",
+    roleDesc: "Relasi Basis Data & Mutasi Transaksi",
+    experienceLevel: "Mahir (Relasi Antartabel)",
     projectUsage: "Sistem Pembayaran SPP Sekolah Alam",
   },
   {
+    position: "CB",
+    name: "RBAC & Auth",
+    number: 5,
+    category: "DEF",
+    roleDesc: "Role-Based Access & Keystore Encryption",
+    experienceLevel: "Mahir (Keamanan Multi-Peran)",
+    projectUsage: "7 Peran SIMPEG & CMS Cuplik.com",
+  },
+  {
     position: "RB",
-    name: "Testing & Validasi",
+    name: "Testing & Sanitasi",
     number: 2,
     category: "DEF",
-    roleDesc: "Pengujian Alur End-to-End & Sanitasi Form",
+    roleDesc: "Pengujian End-to-End & Anti-XSS Sanitasi",
     experienceLevel: "Mahir (Quality Assurance)",
-    projectUsage: "Payment Gateway & Modul SPK",
+    projectUsage: "Sanitasi Cuplik & E2E SPP Sekolah Alam",
   },
 
   // Goalkeeper (Security & Auth)
   {
     position: "GK",
-    name: "Security & Auth",
+    name: "Keamanan Sistem",
     number: 1,
     category: "GK",
-    roleDesc: "Role-Based Access Control, Hash & Token",
-    experienceLevel: "Mahir (Standar Keamanan)",
-    projectUsage: "Multi-Role Admin, User, & Verifikator",
+    roleDesc: "Filter Bot, Anti-Manipulasi Polling & Token",
+    experienceLevel: "Mahir (Pertahanan Berlapis)",
+    projectUsage: "Portal Publik Cuplik & Autentikasi SIMPEG",
   },
 ];
 
 const BENCH_PLAYERS: PlayerSkill[] = [
   {
     position: "SUB",
-    name: "Flutter & Dart",
+    name: "Vue.js",
+    number: 18,
+    category: "SUB",
+    roleDesc: "Progressive JavaScript Framework & Reusable Components",
+    experienceLevel: "Menengah",
+    projectUsage: "Pengembangan Antarmuka Web Interaktif",
+  },
+  {
+    position: "SUB",
+    name: "Next.js",
+    number: 15,
+    category: "SUB",
+    roleDesc: "React Server Components & SSR",
+    experienceLevel: "Menengah",
+    projectUsage: "Eksplorasi Web App Modern",
+  },
+  {
+    position: "SUB",
+    name: "OneSignal & FCM",
     number: 17,
     category: "SUB",
-    roleDesc: "Mobile Multi-Platform Android & iOS",
-    experienceLevel: "Menengah (Aktif Riset)",
-    projectUsage: "Pengembangan Aplikasi Mobile",
+    roleDesc: "Push Notification Multi-Kanal",
+    experienceLevel: "Mahir",
+    projectUsage: "SIMPEG Mobile PERUMDAM",
   },
   {
     position: "SUB",
@@ -138,6 +156,15 @@ const BENCH_PLAYERS: PlayerSkill[] = [
     roleDesc: "Version Control, Branching & Kolaborasi Tim",
     experienceLevel: "Mahir (Terbiasa di Tim)",
     projectUsage: "Seluruh Repository Proyek",
+  },
+  {
+    position: "SUB",
+    name: "Bootstrap & AJAX",
+    number: 16,
+    category: "SUB",
+    roleDesc: "Komponen UI Responsif & Asynchronous",
+    experienceLevel: "Mahir",
+    projectUsage: "Presensi Pegawai & Pabrik Lumpia",
   },
   {
     position: "SUB",
@@ -362,7 +389,7 @@ export function TacticalFormation() {
 
             <div className="mt-6 pt-5 border-t border-paper/10 flex items-center gap-2 text-xs font-mono text-muted-ink">
               <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
-              <span>Teruji pada 5 proyek produksi &amp; magang industri</span>
+              <span>Teruji pada 8 proyek aplikasi web dan mobile</span>
             </div>
           </div>
 

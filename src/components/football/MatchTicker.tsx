@@ -3,10 +3,11 @@ import { Trophy, Activity, ShieldCheck, Zap, Code2 } from "lucide-react";
 export function MatchTicker() {
   const TICKER_ITEMS = [
     { icon: Activity, text: "STATUS: TERSEDIA UNTUK FULL-TIME, KONTRAK & FREELANCE" },
-    { icon: Trophy, text: "REKAM JEJAK: 5 PROYEK SISTEM WEB & MOBILE SELESAI" },
-    { icon: Code2, text: "KEAHLIAN UTAMA: LARAVEL, REST API, POSTGRESQL, FLUTTER & TAILWIND" },
-    { icon: ShieldCheck, text: "PROYEK AKHIR: SISTEM SPK METODE SAW PENENTUAN UKT POLINDRA" },
-    { icon: Zap, text: "PENGALAMAN INDUSTRI: BANDUNG TECHNO PARK & POLINDRA" },
+    { icon: Trophy, text: "REKAM JEJAK: 8 PROYEK APLIKASI WEB & MOBILE SEJAK 2023" },
+    { icon: Zap, text: "FOUNDER: PEPRA LAB — STARTUP TEKNOLOGI & DIGITAL AGENCY" },
+    { icon: Code2, text: "KEAHLIAN: LARAVEL, FLUTTER, REACT, VUE.JS, SUPABASE & REST API" },
+    { icon: ShieldCheck, text: "AKADEMIK: LULUSAN D4 RPL POLINDRA (IPK 3.80)" },
+    { icon: Trophy, text: "KEAMANAN: RBAC, SANITASI INPUT ANTI-XSS & NOTIFIKASI MULTI-KANAL" },
   ];
 
   return (

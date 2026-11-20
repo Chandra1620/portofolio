@@ -16,13 +16,13 @@ export const Route = createFileRoute("/experience")({
       {
         name: "description",
         content:
-          "Rekam jejak 5 proyek pengembangan aplikasi web sejak 2023: Proyek Akhir SPK SAW POLINDRA, Magang Industri Bandung Techno Park, Sistem Pembayaran SPP, dan Presensi Pegawai.",
+          "Rekam jejak 8 proyek pengembangan aplikasi web dan mobile sejak 2023 serta startup Pepra Lab: Cuplik.com, Buwuh.com, SIMPEG Mobile PERUMDAM, Proyek Akhir SPK SAW POLINDRA, dan Magang Industri Bandung Techno Park.",
       },
       { property: "og:title", content: "Pengalaman & Linimasa Proyek | Chandra Apriyanto" },
       {
         property: "og:description",
         content:
-          "Pengalaman nyata Chandra Apriyanto dalam pengembangan backend Laravel, REST API, basis data PostgreSQL/MySQL, dan pengujian aplikasi end-to-end.",
+          "Pengalaman nyata Chandra Apriyanto dalam pengembangan Laravel, Flutter, React 19, Supabase, REST API, basis data PostgreSQL/MySQL, dan kepemimpinan startup.",
       },
     ],
   }),
@@ -39,8 +39,8 @@ function ExperiencePage() {
         <div className="max-w-2xl">
           <SectionHeading
             badge="Linimasa Pengalaman"
-            title="Riwayat Proyek &amp; Magang Industri"
-            description="5 proyek pengembangan sistem web dan mobile sejak 2023, mencakup proyek akhir akademik, magang industri di Bandung Techno Park, hingga implementasi sistem untuk instansi dan UKM."
+            title="Riwayat Proyek, Startup &amp; Magang Industri"
+            description="8 proyek pengembangan sistem web dan mobile sejak 2023, mencakup inisiatif startup Pepra Lab, proyek klien media, instansi BUMD, proyek akhir akademik, magang industri di Bandung Techno Park, hingga implementasi sistem untuk instansi dan UKM."
           />
         </div>
 
@@ -175,7 +175,7 @@ function ExperiencePage() {
         <div className="max-w-xl mx-auto space-y-4">
           <h3 className="font-display font-bold text-2xl text-paper">Tertarik Mengajak Bergabung ke Tim Anda?</h3>
           <p className="text-sm text-muted-ink">
-            Saya terbuka untuk posisi Fullstack Developer, Backend Engineer (Laravel/PHP), maupun Frontend Developer.
+            Saya terbuka untuk posisi Fullstack Developer, Mobile Developer (Flutter), Backend Engineer (Laravel), maupun Frontend Developer (React).
           </p>
           <div className="pt-2">
             <Link

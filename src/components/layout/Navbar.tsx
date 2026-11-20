@@ -56,7 +56,7 @@ export function Navbar() {
               <span className="size-1.5 rounded-full bg-turf" />
             </span>
             <span className="font-mono text-[10px] uppercase tracking-widest text-muted-ink font-medium -mt-0.5 hidden sm:block">
-              Fullstack Developer
+              Fullstack &amp; Mobile Developer
             </span>
           </div>
         </Link>
